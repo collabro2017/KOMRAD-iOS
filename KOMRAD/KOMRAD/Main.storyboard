@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1GT-GA-ueT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test" translatesAutoresizingMaskIntoConstraints="NO" id="a3F-H2-hGT">
+                                <rect key="frame" x="0.0" y="0.0" width="383" height="663"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8xw-nr-5mb">
+                                <rect key="frame" x="30" y="66" width="323" height="535"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="8xw-nr-5mb" id="P6m-YQ-BHb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YyQ-z4-TFA">
+            <objects>
+                <viewController id="1GT-GA-ueT" customClass="ViewController" customModule="KOMRAD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MSi-5e-iH7"/>
+                        <viewControllerLayoutGuide type="bottom" id="0qa-zs-Coe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="er4-zd-6MR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KOMRADbackground" translatesAutoresizingMaskIntoConstraints="NO" id="6TF-vC-Avf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <view hidden="YES" opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="slA-OU-T6k">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shadowsingle" translatesAutoresizingMaskIntoConstraints="NO" id="8W6-eR-0ih">
+                                <rect key="frame" x="0.0" y="100" width="558" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8W6-eR-0ih" secondAttribute="height" multiplier="62:21" id="DVZ-8J-Pnd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KOMRADshadow" translatesAutoresizingMaskIntoConstraints="NO" id="hE8-cL-pTd">
+                                <rect key="frame" x="0.0" y="0.0" width="314" height="272"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hE8-cL-pTd" secondAttribute="height" multiplier="628:544" id="d8o-dt-5zr"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KOMRADlight" translatesAutoresizingMaskIntoConstraints="NO" id="uj0-AS-nfV">
+                                <rect key="frame" x="372" y="40" width="279" height="226"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uj0-AS-nfV" secondAttribute="height" multiplier="559:453" id="aLx-Ls-fwZ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="subcaption" translatesAutoresizingMaskIntoConstraints="NO" id="acf-Fj-LwK">
+                                <rect key="frame" x="60" y="368" width="293" height="42"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="237" y="306" width="293" height="42"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo618x314" translatesAutoresizingMaskIntoConstraints="NO" id="HG8-2H-Ofc">
+                                <rect key="frame" x="104" y="490" width="206" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HG8-2H-Ofc" secondAttribute="height" multiplier="103:52" id="h5D-3k-AcQ"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="281" y="336" width="206" height="104"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KOMRADsinglelight" translatesAutoresizingMaskIntoConstraints="NO" id="RkY-oQ-sQM" userLabel="ImgKOMRADsingle">
+                                <rect key="frame" x="0.0" y="100" width="414" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RkY-oQ-sQM" secondAttribute="height" multiplier="87:25" id="yQV-Qb-EdL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" misplaced="YES" text="this application might self-destruct" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55H-JT-Dl9">
+                                <rect key="frame" x="85" y="0.0" width="245" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uj0-AS-nfV" firstAttribute="top" secondItem="MSi-5e-iH7" secondAttribute="bottom" priority="250" constant="40" id="2aZ-Yk-Qrk"/>
+                            <constraint firstItem="6TF-vC-Avf" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HG8-2H-Ofc" secondAttribute="bottom" priority="250" constant="40" id="3D0-KI-5IN"/>
+                            <constraint firstItem="RkY-oQ-sQM" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="er4-zd-6MR" secondAttribute="trailing" id="4wV-CO-bcW"/>
+                            <constraint firstItem="RkY-oQ-sQM" firstAttribute="top" secondItem="MSi-5e-iH7" secondAttribute="bottom" priority="250" constant="80" id="7m2-1j-0d5"/>
+                            <constraint firstItem="hE8-cL-pTd" firstAttribute="top" secondItem="uj0-AS-nfV" secondAttribute="top" id="9Gd-ei-Myr"/>
+                            <constraint firstItem="acf-Fj-LwK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uj0-AS-nfV" secondAttribute="bottom" constant="8" symbolic="YES" id="9LK-4z-nln"/>
+                            <constraint firstItem="RkY-oQ-sQM" firstAttribute="centerX" secondItem="er4-zd-6MR" secondAttribute="centerX" id="Abd-wB-ZzY"/>
+                            <constraint firstItem="acf-Fj-LwK" firstAttribute="centerX" secondItem="er4-zd-6MR" secondAttribute="centerX" id="CKi-vq-m0H"/>
+                            <constraint firstItem="uj0-AS-nfV" firstAttribute="centerX" secondItem="er4-zd-6MR" secondAttribute="centerX" id="ILe-Du-jCZ"/>
+                            <constraint firstItem="uj0-AS-nfV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="er4-zd-6MR" secondAttribute="topMargin" id="IOc-5A-UcJ"/>
+                            <constraint firstItem="hE8-cL-pTd" firstAttribute="leading" secondItem="uj0-AS-nfV" secondAttribute="leading" id="Ijh-0W-rvW"/>
+                            <constraint firstItem="6TF-vC-Avf" firstAttribute="trailing" secondItem="er4-zd-6MR" secondAttribute="trailingMargin" constant="20" id="QI8-Yb-fMT"/>
+                            <constraint firstItem="slA-OU-T6k" firstAttribute="width" secondItem="6TF-vC-Avf" secondAttribute="width" id="RFi-pn-901"/>
+                            <constraint firstItem="acf-Fj-LwK" firstAttribute="top" secondItem="er4-zd-6MR" secondAttribute="centerY" priority="250" id="RUq-c8-0qL"/>
+                            <constraint firstItem="slA-OU-T6k" firstAttribute="height" secondItem="6TF-vC-Avf" secondAttribute="height" id="SXk-dD-ext"/>
+                            <constraint firstItem="8W6-eR-0ih" firstAttribute="top" secondItem="RkY-oQ-sQM" secondAttribute="top" id="TZc-TF-LC6"/>
+                            <constraint firstItem="HG8-2H-Ofc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="acf-Fj-LwK" secondAttribute="bottom" constant="20" id="Tvf-Ss-Ytt"/>
+                            <constraint firstItem="55H-JT-Dl9" firstAttribute="centerX" secondItem="er4-zd-6MR" secondAttribute="centerX" id="V5N-qK-GFY"/>
+                            <constraint firstItem="6TF-vC-Avf" firstAttribute="top" secondItem="er4-zd-6MR" secondAttribute="topMargin" id="WXX-1u-WOf"/>
+                            <constraint firstItem="acf-Fj-LwK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RkY-oQ-sQM" secondAttribute="bottom" constant="8" symbolic="YES" id="WfZ-wu-4RO"/>
+                            <constraint firstItem="HG8-2H-Ofc" firstAttribute="centerX" secondItem="er4-zd-6MR" secondAttribute="centerX" id="Xjw-3P-sXf"/>
+                            <constraint firstItem="RkY-oQ-sQM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="er4-zd-6MR" secondAttribute="leading" id="adW-8N-WEy"/>
+                            <constraint firstItem="6TF-vC-Avf" firstAttribute="leading" secondItem="er4-zd-6MR" secondAttribute="leadingMargin" constant="-20" id="btE-qO-k7k"/>
+                            <constraint firstItem="HG8-2H-Ofc" firstAttribute="top" secondItem="acf-Fj-LwK" secondAttribute="bottom" priority="250" constant="80" id="djG-qA-jiD"/>
+                            <constraint firstItem="6TF-vC-Avf" firstAttribute="bottom" secondItem="0qa-zs-Coe" secondAttribute="top" id="hUz-ag-hje"/>
+                            <constraint firstItem="slA-OU-T6k" firstAttribute="top" secondItem="6TF-vC-Avf" secondAttribute="top" id="jLn-E6-ROe"/>
+                            <constraint firstItem="8W6-eR-0ih" firstAttribute="leading" secondItem="RkY-oQ-sQM" secondAttribute="leading" id="tWO-q7-enm"/>
+                            <constraint firstItem="acf-Fj-LwK" firstAttribute="centerX" secondItem="er4-zd-6MR" secondAttribute="centerX" id="zTI-DE-lCe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hE8-cL-pTd"/>
+                                <exclude reference="uj0-AS-nfV"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="8W6-eR-0ih"/>
+                                <include reference="hE8-cL-pTd"/>
+                                <include reference="uj0-AS-nfV"/>
+                                <exclude reference="RkY-oQ-sQM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="imgDarkness" destination="slA-OU-T6k" id="mSz-L5-DBP"/>
+                        <outlet property="imgKOMRAD" destination="uj0-AS-nfV" id="1jn-8m-9ni"/>
+                        <outlet property="imgKOMRADsingle" destination="RkY-oQ-sQM" id="Kuc-Ld-g4c"/>
+                        <outlet property="lblLoadingContent" destination="55H-JT-Dl9" id="rwc-Ks-Y0b"/>
+                        <outlet property="viewTitleScreen" destination="er4-zd-6MR" id="iX1-c3-5Uz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwO-ZA-1s6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="1438"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="KOMRADbackground" width="666" height="500"/>
+        <image name="KOMRADlight" width="279" height="226"/>
+        <image name="KOMRADshadow" width="314" height="272"/>
+        <image name="KOMRADsinglelight" width="522" height="150"/>
+        <image name="Logo618x314" width="206" height="104"/>
+        <image name="Shadowsingle" width="558" height="189"/>
+        <image name="Test" width="666" height="500"/>
+        <image name="subcaption" width="293" height="42"/>
+    </resources>
+</document>

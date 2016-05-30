@@ -1,0 +1,1120 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F3153E81BA3399E00BEA3A6 /* SplashInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3153E71BA3399E00BEA3A6 /* SplashInterfaceController.swift */; };
+		1F57BE9A1B7C108500ACA589 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F57BE991B7C108500ACA589 /* Choice.swift */; };
+		1F5E36231BB5B858009A5AB1 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E36221BB5B858009A5AB1 /* RowController.swift */; settings = {ASSET_TAGS = (); }; };
+		1F5E36251BB5D56E009A5AB1 /* LineChatRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E36241BB5D56E009A5AB1 /* LineChatRowController.swift */; settings = {ASSET_TAGS = (); }; };
+		1F5E36271BB5D61E009A5AB1 /* ChoiceChatRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E36261BB5D61E009A5AB1 /* ChoiceChatRowController.swift */; settings = {ASSET_TAGS = (); }; };
+		1F5E36291BB5E385009A5AB1 /* LineTerminalRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E36281BB5E385009A5AB1 /* LineTerminalRowController.swift */; settings = {ASSET_TAGS = (); }; };
+		1F5ED23F1B7BB5F6008F3B67 /* ChoiceMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5ED23E1B7BB5F5008F3B67 /* ChoiceMessage.swift */; };
+		1F697A551B7D00BF00CA8708 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F697A541B7D00BF00CA8708 /* Line.swift */; };
+		1F697A581B7D2FA600CA8708 /* PassageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F697A561B7D2FA600CA8708 /* PassageCell.swift */; };
+		1F697A591B7D2FA600CA8708 /* PassageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F697A571B7D2FA600CA8708 /* PassageCell.xib */; };
+		1F6EE8C91B973F970006466F /* ChatInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6EE8C81B973F970006466F /* ChatInterfaceController.swift */; };
+		1F6EE8CB1B9740780006466F /* ChatRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6EE8CA1B9740780006466F /* ChatRowController.swift */; };
+		1F6EE8CE1B976D3E0006466F /* KomradMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F6EE8CD1B976D3E0006466F /* KomradMessage.png */; };
+		1F9703691BB1C74F00F27994 /* MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9703681BB1C74F00F27994 /* MainInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
+		1F97036B1BB1C79200F27994 /* ChatRowController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97036A1BB1C79200F27994 /* ChatRowController2.swift */; settings = {ASSET_TAGS = (); }; };
+		1F97036D1BB1E61700F27994 /* TerminalRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97036C1BB1E61700F27994 /* TerminalRowController.swift */; settings = {ASSET_TAGS = (); }; };
+		1F97036F1BB1EA8200F27994 /* SplashRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97036E1BB1EA8200F27994 /* SplashRowController.swift */; settings = {ASSET_TAGS = (); }; };
+		1F9781741B7A379000A6D35F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9781711B7A379000A6D35F /* Item.swift */; };
+		1F9781761B7A379000A6D35F /* ItemListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9781731B7A379000A6D35F /* ItemListController.swift */; };
+		1F97817F1B7A830900A6D35F /* SimpleMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97817D1B7A830900A6D35F /* SimpleMessageCell.swift */; };
+		1F9781801B7A830900A6D35F /* SimpleMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F97817E1B7A830900A6D35F /* SimpleMessageCell.xib */; };
+		1F9781831B7A834B00A6D35F /* MessageListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9781821B7A834B00A6D35F /* MessageListAdapter.swift */; };
+		1FBA17831B87AFD4000AC624 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA17821B87AFD4000AC624 /* Singleton.swift */; };
+		1FBA17841B87BA70000AC624 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA17821B87AFD4000AC624 /* Singleton.swift */; };
+		1FD0C82D1B8694F000EC0776 /* PassageRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD0C82C1B8694F000EC0776 /* PassageRowController.swift */; };
+		1FD0C8301B86B2A500EC0776 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDDED2B1B75186F00A09A19 /* Interface.storyboard */; };
+		1FD0C8321B86B2F000EC0776 /* PassageRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD0C82C1B8694F000EC0776 /* PassageRowController.swift */; };
+		1FD0C8361B86B4F800EC0776 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9781711B7A379000A6D35F /* Item.swift */; };
+		1FD0C83B1B86C41C00EC0776 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFDADA71B83EE6100D0700F /* StringExtension.swift */; };
+		1FDDAE6B1BB9809B00BE00DC /* ChoiceTerminalRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDDAE6A1BB9809B00BE00DC /* ChoiceTerminalRowController.swift */; settings = {ASSET_TAGS = (); }; };
+		1FDDECEF1B750C1B00A09A19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDDECEE1B750C1B00A09A19 /* AppDelegate.swift */; };
+		1FDDECF21B750C1B00A09A19 /* KOMRAD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FDDECF01B750C1B00A09A19 /* KOMRAD.xcdatamodeld */; };
+		1FDDECF91B750C1B00A09A19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FDDECF81B750C1B00A09A19 /* Images.xcassets */; };
+		1FDDED081B750C1B00A09A19 /* KOMRADTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDDED071B750C1B00A09A19 /* KOMRADTests.swift */; };
+		1FDDED1B1B75186F00A09A19 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDDED1A1B75186F00A09A19 /* InterfaceController.swift */; };
+		1FDDED1D1B75186F00A09A19 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDDED1C1B75186F00A09A19 /* NotificationController.swift */; };
+		1FDDED1F1B75186F00A09A19 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDDED1E1B75186F00A09A19 /* GlanceController.swift */; };
+		1FDDED2D1B75186F00A09A19 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDDED2B1B75186F00A09A19 /* Interface.storyboard */; };
+		1FDDED2F1B75186F00A09A19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FDDED2E1B75186F00A09A19 /* Images.xcassets */; };
+		1FEC56191BB43277002083FD /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC56181BB43277002083FD /* Manager.swift */; settings = {ASSET_TAGS = (); }; };
+		1FFDADA81B83EE6100D0700F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFDADA71B83EE6100D0700F /* StringExtension.swift */; };
+		4C9A2E531B9883DE00EEA2F0 /* VT220-mod.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9A2E521B9883DE00EEA2F0 /* VT220-mod.ttf */; };
+		4CADB4261B8CA45200F4A268 /* KOMRAD WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1FDDED151B75186F00A09A19 /* KOMRAD WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4CADB4291B8CA45300F4A268 /* KOMRAD WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1FDDED241B75186F00A09A19 /* KOMRAD WatchKit App.app */; };
+		6F0631331BA1FE4C008715FB /* BuggleEfect.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F0631321BA1FE4C008715FB /* BuggleEfect.png */; };
+		6F6063E61BA868F700D4588D /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6063E51BA868F700D4588D /* ParseService.swift */; settings = {ASSET_TAGS = (); }; };
+		6F6063EA1BA86A3200D4588D /* PFPassage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6063E91BA86A3200D4588D /* PFPassage.swift */; settings = {ASSET_TAGS = (); }; };
+		6F6063EC1BA87A7800D4588D /* Passage_old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6063EB1BA87A7800D4588D /* Passage_old.swift */; settings = {ASSET_TAGS = (); }; };
+		6F6063EF1BA8A7F900D4588D /* PFStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6063EE1BA8A7F900D4588D /* PFStory.swift */; settings = {ASSET_TAGS = (); }; };
+		6FC0D0031BB0739D00A084B0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC0D0021BB0739D00A084B0 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		6FC0D0051BB073BC00A084B0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC0D0041BB073BC00A084B0 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		6FE8009A1B976AD300A86115 /* PassageRowController_backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE800991B976AD300A86115 /* PassageRowController_backup.swift */; };
+		6FE86E671BB026CC0051706C /* PFStoryVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE86E661BB026CC0051706C /* PFStoryVariable.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE86E681BB039F70051706C /* Passage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A04E1BAB416B00BAE852 /* Passage.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE86E691BB03A330051706C /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F57BE991B7C108500ACA589 /* Choice.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE86E6A1BB03A360051706C /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F697A541B7D00BF00CA8708 /* Line.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE86E6B1BB03A3A0051706C /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A0581BAC427C00BAE852 /* Tag.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE86E6C1BB03A3D0051706C /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A05E1BAC655600BAE852 /* Path.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE8A04C1BAB30FB00BAE852 /* PFLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A04B1BAB30FB00BAE852 /* PFLine.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE8A04F1BAB416B00BAE852 /* Passage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A04E1BAB416B00BAE852 /* Passage.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE8A0511BAB5EF300BAE852 /* PFChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A0501BAB5EF300BAE852 /* PFChoice.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE8A0531BAB61EA00BAE852 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A0521BAB61EA00BAE852 /* Utils.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE8A0551BAC3FE700BAE852 /* PFTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A0541BAC3FE700BAE852 /* PFTag.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE8A0571BAC403000BAE852 /* PFPassageTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A0561BAC403000BAE852 /* PFPassageTag.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE8A0591BAC427C00BAE852 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A0581BAC427C00BAE852 /* Tag.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE8A05C1BAC44A600BAE852 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A05B1BAC44A600BAE852 /* Constant.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE8A05D1BAC498500BAE852 /* Passage_old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6063EB1BA87A7800D4588D /* Passage_old.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE8A05F1BAC655600BAE852 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A05E1BAC655600BAE852 /* Path.swift */; settings = {ASSET_TAGS = (); }; };
+		6FE8A0611BAC6FA600BAE852 /* PFPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A0601BAC6FA600BAE852 /* PFPath.swift */; settings = {ASSET_TAGS = (); }; };
+		6FEE69EC1BB4682B00605471 /* PFChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE69EB1BB4682B00605471 /* PFChapter.swift */; settings = {ASSET_TAGS = (); }; };
+		6FEE69EE1BB46BD900605471 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE69ED1BB46BD900605471 /* Story.swift */; settings = {ASSET_TAGS = (); }; };
+		6FEE69F01BB46E7700605471 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE69EF1BB46E7700605471 /* Chapter.swift */; settings = {ASSET_TAGS = (); }; };
+		6FEE69F11BB489EA00605471 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE69ED1BB46BD900605471 /* Story.swift */; settings = {ASSET_TAGS = (); }; };
+		6FEE69F21BB489ED00605471 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE69EF1BB46E7700605471 /* Chapter.swift */; settings = {ASSET_TAGS = (); }; };
+		6FEE69F41BB48F1C00605471 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE69F31BB48F1C00605471 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6FF8B8BF1BB18C0E00642B22 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF8B8BE1BB18C0E00642B22 /* WatchConnectivity.framework */; };
+		C23B53D91B7A8EC400AC2466 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23B53D81B7A8EC400AC2466 /* LaunchScreen.xib */; };
+		C23B53DB1B7A8ECA00AC2466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23B53DA1B7A8ECA00AC2466 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FDDED021B750C1B00A09A19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FDDECE11B750C1B00A09A19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FDDECE81B750C1B00A09A19;
+			remoteInfo = KOMRAD;
+		};
+		4CADB4241B8CA45200F4A268 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FDDECE11B750C1B00A09A19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FDDED141B75186F00A09A19;
+			remoteInfo = "KOMRAD WatchKit Extension";
+		};
+		4CADB4271B8CA45300F4A268 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FDDECE11B750C1B00A09A19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FDDED231B75186F00A09A19;
+			remoteInfo = "KOMRAD WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4CADB42A1B8CA45300F4A268 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4CADB4261B8CA45200F4A268 /* KOMRAD WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CADB42B1B8CA45300F4A268 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4CADB4291B8CA45300F4A268 /* KOMRAD WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1F0A9EC41BA7419600B268E6 /* KOMRAD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KOMRAD.entitlements; sourceTree = "<group>"; };
+		1F0A9EC51BA741A900B268E6 /* KOMRAD WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "KOMRAD WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		1F3153E71BA3399E00BEA3A6 /* SplashInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashInterfaceController.swift; sourceTree = "<group>"; };
+		1F57BE991B7C108500ACA589 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
+		1F5E36221BB5B858009A5AB1 /* RowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
+		1F5E36241BB5D56E009A5AB1 /* LineChatRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChatRowController.swift; sourceTree = "<group>"; };
+		1F5E36261BB5D61E009A5AB1 /* ChoiceChatRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceChatRowController.swift; sourceTree = "<group>"; };
+		1F5E36281BB5E385009A5AB1 /* LineTerminalRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineTerminalRowController.swift; sourceTree = "<group>"; };
+		1F5ED23E1B7BB5F5008F3B67 /* ChoiceMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceMessage.swift; sourceTree = "<group>"; };
+		1F697A541B7D00BF00CA8708 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		1F697A561B7D2FA600CA8708 /* PassageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PassageCell.swift; path = Views/PassageCell.swift; sourceTree = "<group>"; };
+		1F697A571B7D2FA600CA8708 /* PassageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PassageCell.xib; path = Views/PassageCell.xib; sourceTree = "<group>"; };
+		1F6EE8C81B973F970006466F /* ChatInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatInterfaceController.swift; path = "KOMRAD WatchKit Extension/ChatInterfaceController.swift"; sourceTree = SOURCE_ROOT; };
+		1F6EE8CA1B9740780006466F /* ChatRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRowController.swift; sourceTree = "<group>"; };
+		1F6EE8CD1B976D3E0006466F /* KomradMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = KomradMessage.png; path = Assets/KomradMessage.png; sourceTree = "<group>"; };
+		1F9703681BB1C74F00F27994 /* MainInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInterfaceController.swift; sourceTree = "<group>"; };
+		1F97036A1BB1C79200F27994 /* ChatRowController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRowController2.swift; sourceTree = "<group>"; };
+		1F97036C1BB1E61700F27994 /* TerminalRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalRowController.swift; sourceTree = "<group>"; };
+		1F97036E1BB1EA8200F27994 /* SplashRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashRowController.swift; sourceTree = "<group>"; };
+		1F9781711B7A379000A6D35F /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Models/Item.swift; sourceTree = "<group>"; };
+		1F9781731B7A379000A6D35F /* ItemListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListController.swift; path = Controllers/ItemListController.swift; sourceTree = "<group>"; };
+		1F97817D1B7A830900A6D35F /* SimpleMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleMessageCell.swift; path = Controllers/SimpleMessageCell.swift; sourceTree = "<group>"; };
+		1F97817E1B7A830900A6D35F /* SimpleMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleMessageCell.xib; path = Views/SimpleMessageCell.xib; sourceTree = "<group>"; };
+		1F9781821B7A834B00A6D35F /* MessageListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageListAdapter.swift; path = Adapters/MessageListAdapter.swift; sourceTree = "<group>"; };
+		1FBA17821B87AFD4000AC624 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Singleton.swift; path = "../KOMRAD WatchKit Extension/Singleton.swift"; sourceTree = "<group>"; };
+		1FD0C82C1B8694F000EC0776 /* PassageRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PassageRowController.swift; path = "untitled folder/PassageRowController.swift"; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		1FD535341B823DD20078967F /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		1FDDAE6A1BB9809B00BE00DC /* ChoiceTerminalRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceTerminalRowController.swift; sourceTree = "<group>"; };
+=======
+		1FD535341B823DD20078967F /* KOMRAD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KOMRAD-Bridging-Header.h"; sourceTree = "<group>"; };
+>>>>>>> develop
+		1FDDECE91B750C1B00A09A19 /* KOMRAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOMRAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FDDECED1B750C1B00A09A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FDDECEE1B750C1B00A09A19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1FDDECF11B750C1B00A09A19 /* KOMRAD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KOMRAD.xcdatamodel; sourceTree = "<group>"; };
+		1FDDECF81B750C1B00A09A19 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1FDDED011B750C1B00A09A19 /* KOMRADTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KOMRADTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FDDED061B750C1B00A09A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FDDED071B750C1B00A09A19 /* KOMRADTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOMRADTests.swift; sourceTree = "<group>"; };
+		1FDDED151B75186F00A09A19 /* KOMRAD WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "KOMRAD WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FDDED181B75186F00A09A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FDDED191B75186F00A09A19 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		1FDDED1A1B75186F00A09A19 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		1FDDED1C1B75186F00A09A19 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		1FDDED1E1B75186F00A09A19 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		1FDDED241B75186F00A09A19 /* KOMRAD WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KOMRAD WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FDDED2A1B75186F00A09A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FDDED2C1B75186F00A09A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1FDDED2E1B75186F00A09A19 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1FEC56181BB43277002083FD /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		1FFDADA71B83EE6100D0700F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		4C9A2E521B9883DE00EEA2F0 /* VT220-mod.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VT220-mod.ttf"; sourceTree = "<group>"; };
+		6F0631321BA1FE4C008715FB /* BuggleEfect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BuggleEfect.png; path = Assets/BuggleEfect.png; sourceTree = "<group>"; };
+		6F6063E51BA868F700D4588D /* ParseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseService.swift; sourceTree = "<group>"; };
+		6F6063E91BA86A3200D4588D /* PFPassage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFPassage.swift; sourceTree = "<group>"; };
+		6F6063EB1BA87A7800D4588D /* Passage_old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passage_old.swift; sourceTree = "<group>"; };
+		6F6063EE1BA8A7F900D4588D /* PFStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFStory.swift; sourceTree = "<group>"; };
+		6FC0D0021BB0739D00A084B0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		6FC0D0041BB073BC00A084B0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6FC0D0061BB07F2C00A084B0 /* KOMRAD WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "KOMRAD WatchKit App.entitlements"; sourceTree = "<group>"; };
+		6FE800991B976AD300A86115 /* PassageRowController_backup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassageRowController_backup.swift; sourceTree = "<group>"; };
+		6FE86E661BB026CC0051706C /* PFStoryVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFStoryVariable.swift; sourceTree = "<group>"; };
+		6FE8A04B1BAB30FB00BAE852 /* PFLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFLine.swift; sourceTree = "<group>"; };
+		6FE8A04E1BAB416B00BAE852 /* Passage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passage.swift; sourceTree = "<group>"; };
+		6FE8A0501BAB5EF300BAE852 /* PFChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFChoice.swift; sourceTree = "<group>"; };
+		6FE8A0521BAB61EA00BAE852 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		6FE8A0541BAC3FE700BAE852 /* PFTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFTag.swift; sourceTree = "<group>"; };
+		6FE8A0561BAC403000BAE852 /* PFPassageTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFPassageTag.swift; sourceTree = "<group>"; };
+		6FE8A0581BAC427C00BAE852 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		6FE8A05B1BAC44A600BAE852 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		6FE8A05E1BAC655600BAE852 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		6FE8A0601BAC6FA600BAE852 /* PFPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFPath.swift; sourceTree = "<group>"; };
+		6FEE69EB1BB4682B00605471 /* PFChapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFChapter.swift; sourceTree = "<group>"; };
+		6FEE69ED1BB46BD900605471 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		6FEE69EF1BB46E7700605471 /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
+		6FEE69F31BB48F1C00605471 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6FF8B8BE1BB18C0E00642B22 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		C23B53D81B7A8EC400AC2466 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		C23B53DA1B7A8ECA00AC2466 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FDDECE61B750C1B00A09A19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FF8B8BF1BB18C0E00642B22 /* WatchConnectivity.framework in Frameworks */,
+				6FC0D0051BB073BC00A084B0 /* Parse.framework in Frameworks */,
+				6FC0D0031BB0739D00A084B0 /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDDECFE1B750C1B00A09A19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDDED121B75186F00A09A19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355EE6CC0A7A1816CF399A09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F6EE8CC1B976D180006466F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6F0631321BA1FE4C008715FB /* BuggleEfect.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		1F9703701BB1EB4600F27994 /* Refactor Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F9703681BB1C74F00F27994 /* MainInterfaceController.swift */,
+				1F97036A1BB1C79200F27994 /* ChatRowController2.swift */,
+				1F97036C1BB1E61700F27994 /* TerminalRowController.swift */,
+				1F97036E1BB1EA8200F27994 /* SplashRowController.swift */,
+				1FEC56181BB43277002083FD /* Manager.swift */,
+				1F5E36221BB5B858009A5AB1 /* RowController.swift */,
+				1F5E36241BB5D56E009A5AB1 /* LineChatRowController.swift */,
+				1F5E36261BB5D61E009A5AB1 /* ChoiceChatRowController.swift */,
+				1F5E36281BB5E385009A5AB1 /* LineTerminalRowController.swift */,
+				1FDDAE6A1BB9809B00BE00DC /* ChoiceTerminalRowController.swift */,
+			);
+			name = "Refactor Controllers";
+			sourceTree = "<group>";
+		};
+		1F9781771B7A817300A6D35F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F97817E1B7A830900A6D35F /* SimpleMessageCell.xib */,
+				1F697A571B7D2FA600CA8708 /* PassageCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1F9781781B7A817A00A6D35F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F697A561B7D2FA600CA8708 /* PassageCell.swift */,
+				1F97817D1B7A830900A6D35F /* SimpleMessageCell.swift */,
+				1F9781731B7A379000A6D35F /* ItemListController.swift */,
+				6FEE69F31BB48F1C00605471 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1F9781791B7A818300A6D35F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F6063EB1BA87A7800D4588D /* Passage_old.swift */,
+				1F9781711B7A379000A6D35F /* Item.swift */,
+				1F5ED23E1B7BB5F5008F3B67 /* ChoiceMessage.swift */,
+				1F57BE991B7C108500ACA589 /* Choice.swift */,
+				1F697A541B7D00BF00CA8708 /* Line.swift */,
+				6FE8A04E1BAB416B00BAE852 /* Passage.swift */,
+				6FE8A0581BAC427C00BAE852 /* Tag.swift */,
+				6FE8A05E1BAC655600BAE852 /* Path.swift */,
+				6FEE69ED1BB46BD900605471 /* Story.swift */,
+				6FEE69EF1BB46E7700605471 /* Chapter.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1F97817A1B7A818900A6D35F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6F6063E51BA868F700D4588D /* ParseService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		1F9781811B7A832D00A6D35F /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				1F9781821B7A834B00A6D35F /* MessageListAdapter.swift */,
+			);
+			name = Adapters;
+			sourceTree = "<group>";
+		};
+		1FD0C82B1B8694A200EC0776 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F9703701BB1EB4600F27994 /* Refactor Controllers */,
+				1FBA17821B87AFD4000AC624 /* Singleton.swift */,
+				1FD0C82C1B8694F000EC0776 /* PassageRowController.swift */,
+				1F6EE8C81B973F970006466F /* ChatInterfaceController.swift */,
+				1F6EE8CA1B9740780006466F /* ChatRowController.swift */,
+				6FE800991B976AD300A86115 /* PassageRowController_backup.swift */,
+				1F3153E71BA3399E00BEA3A6 /* SplashInterfaceController.swift */,
+			);
+			name = Controllers;
+			path = "../KOMRAD WatchKit App";
+			sourceTree = "<group>";
+		};
+		1FDDECE01B750C1B00A09A19 = {
+			isa = PBXGroup;
+			children = (
+				1FDDECEB1B750C1B00A09A19 /* KOMRAD */,
+				1FDDED041B750C1B00A09A19 /* KOMRADTests */,
+				1FDDED161B75186F00A09A19 /* KOMRAD WatchKit Extension */,
+				1FDDED281B75186F00A09A19 /* KOMRAD WatchKit App */,
+				1FDDECEA1B750C1B00A09A19 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FDDECEA1B750C1B00A09A19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FDDECE91B750C1B00A09A19 /* KOMRAD.app */,
+				1FDDED011B750C1B00A09A19 /* KOMRADTests.xctest */,
+				1FDDED151B75186F00A09A19 /* KOMRAD WatchKit Extension.appex */,
+				1FDDED241B75186F00A09A19 /* KOMRAD WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FDDECEB1B750C1B00A09A19 /* KOMRAD */ = {
+			isa = PBXGroup;
+			children = (
+				6FC0D0011BB0736800A084B0 /* Frameworks */,
+				6FE8A05A1BAC449500BAE852 /* Misc */,
+				6FE8A04D1BAB405300BAE852 /* Parse Models */,
+				1F0A9EC41BA7419600B268E6 /* KOMRAD.entitlements */,
+				1FFDADA61B83EE3900D0700F /* Extensions */,
+				1F9781771B7A817300A6D35F /* Views */,
+				1F9781781B7A817A00A6D35F /* Controllers */,
+				1F9781791B7A818300A6D35F /* Models */,
+				1F97817A1B7A818900A6D35F /* Services */,
+				1F9781811B7A832D00A6D35F /* Adapters */,
+				1FDDECEE1B750C1B00A09A19 /* AppDelegate.swift */,
+				C23B53D81B7A8EC400AC2466 /* LaunchScreen.xib */,
+				C23B53DA1B7A8ECA00AC2466 /* Main.storyboard */,
+				1FDDECF81B750C1B00A09A19 /* Images.xcassets */,
+				1FDDECF01B750C1B00A09A19 /* KOMRAD.xcdatamodeld */,
+				1FDDECEC1B750C1B00A09A19 /* Supporting Files */,
+				1FD535341B823DD20078967F /* KOMRAD-Bridging-Header.h */,
+			);
+			path = KOMRAD;
+			sourceTree = "<group>";
+		};
+		1FDDECEC1B750C1B00A09A19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FDDECED1B750C1B00A09A19 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FDDED041B750C1B00A09A19 /* KOMRADTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FDDED071B750C1B00A09A19 /* KOMRADTests.swift */,
+				1FDDED051B750C1B00A09A19 /* Supporting Files */,
+			);
+			path = KOMRADTests;
+			sourceTree = "<group>";
+		};
+		1FDDED051B750C1B00A09A19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FDDED061B750C1B00A09A19 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FDDED161B75186F00A09A19 /* KOMRAD WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1F0A9EC51BA741A900B268E6 /* KOMRAD WatchKit Extension.entitlements */,
+				1FD0C82B1B8694A200EC0776 /* Controllers */,
+				1FDDED1A1B75186F00A09A19 /* InterfaceController.swift */,
+				1FDDED1C1B75186F00A09A19 /* NotificationController.swift */,
+				1FDDED1E1B75186F00A09A19 /* GlanceController.swift */,
+				1FDDED171B75186F00A09A19 /* Supporting Files */,
+			);
+			path = "KOMRAD WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		1FDDED171B75186F00A09A19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FDDED181B75186F00A09A19 /* Info.plist */,
+				1FDDED191B75186F00A09A19 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FDDED281B75186F00A09A19 /* KOMRAD WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				6FC0D0061BB07F2C00A084B0 /* KOMRAD WatchKit App.entitlements */,
+				4C9A2E521B9883DE00EEA2F0 /* VT220-mod.ttf */,
+				1F6EE8CD1B976D3E0006466F /* KomradMessage.png */,
+				1F6EE8CC1B976D180006466F /* Assets */,
+				1FDDED2B1B75186F00A09A19 /* Interface.storyboard */,
+				1FDDED2E1B75186F00A09A19 /* Images.xcassets */,
+				1FDDED291B75186F00A09A19 /* Supporting Files */,
+			);
+			path = "KOMRAD WatchKit App";
+			sourceTree = "<group>";
+		};
+		1FDDED291B75186F00A09A19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FDDED2A1B75186F00A09A19 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FFDADA61B83EE3900D0700F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1FFDADA71B83EE6100D0700F /* StringExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		6FC0D0011BB0736800A084B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FF8B8BE1BB18C0E00642B22 /* WatchConnectivity.framework */,
+				6FC0D0041BB073BC00A084B0 /* Parse.framework */,
+				6FC0D0021BB0739D00A084B0 /* Bolts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FE8A04D1BAB405300BAE852 /* Parse Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F6063EE1BA8A7F900D4588D /* PFStory.swift */,
+				6F6063E91BA86A3200D4588D /* PFPassage.swift */,
+				6FE8A04B1BAB30FB00BAE852 /* PFLine.swift */,
+				6FE8A0501BAB5EF300BAE852 /* PFChoice.swift */,
+				6FE8A0541BAC3FE700BAE852 /* PFTag.swift */,
+				6FE8A0561BAC403000BAE852 /* PFPassageTag.swift */,
+				6FE8A0601BAC6FA600BAE852 /* PFPath.swift */,
+				6FE86E661BB026CC0051706C /* PFStoryVariable.swift */,
+				6FEE69EB1BB4682B00605471 /* PFChapter.swift */,
+			);
+			name = "Parse Models";
+			sourceTree = "<group>";
+		};
+		6FE8A05A1BAC449500BAE852 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				6FE8A0521BAB61EA00BAE852 /* Utils.swift */,
+				6FE8A05B1BAC44A600BAE852 /* Constant.swift */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FDDECE81B750C1B00A09A19 /* KOMRAD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FDDED0B1B750C1B00A09A19 /* Build configuration list for PBXNativeTarget "KOMRAD" */;
+			buildPhases = (
+				1FDDECE51B750C1B00A09A19 /* Sources */,
+				1FDDECE61B750C1B00A09A19 /* Frameworks */,
+				1FDDECE71B750C1B00A09A19 /* Resources */,
+				4CADB42B1B8CA45300F4A268 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CADB4281B8CA45300F4A268 /* PBXTargetDependency */,
+			);
+			name = KOMRAD;
+			productName = KOMRAD;
+			productReference = 1FDDECE91B750C1B00A09A19 /* KOMRAD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FDDED001B750C1B00A09A19 /* KOMRADTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FDDED0E1B750C1B00A09A19 /* Build configuration list for PBXNativeTarget "KOMRADTests" */;
+			buildPhases = (
+				1FDDECFD1B750C1B00A09A19 /* Sources */,
+				1FDDECFE1B750C1B00A09A19 /* Frameworks */,
+				1FDDECFF1B750C1B00A09A19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FDDED031B750C1B00A09A19 /* PBXTargetDependency */,
+			);
+			name = KOMRADTests;
+			productName = KOMRADTests;
+			productReference = 1FDDED011B750C1B00A09A19 /* KOMRADTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1FDDED141B75186F00A09A19 /* KOMRAD WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FDDED361B75186F00A09A19 /* Build configuration list for PBXNativeTarget "KOMRAD WatchKit Extension" */;
+			buildPhases = (
+				1FDDED111B75186F00A09A19 /* Sources */,
+				1FDDED121B75186F00A09A19 /* Frameworks */,
+				1FDDED131B75186F00A09A19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KOMRAD WatchKit Extension";
+			productName = "KOMRAD WatchKit Extension";
+			productReference = 1FDDED151B75186F00A09A19 /* KOMRAD WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		1FDDED231B75186F00A09A19 /* KOMRAD WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FDDED331B75186F00A09A19 /* Build configuration list for PBXNativeTarget "KOMRAD WatchKit App" */;
+			buildPhases = (
+				1FDDED221B75186F00A09A19 /* Resources */,
+				4CADB42A1B8CA45300F4A268 /* Embed App Extensions */,
+				355EE6CC0A7A1816CF399A09 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CADB4251B8CA45200F4A268 /* PBXTargetDependency */,
+			);
+			name = "KOMRAD WatchKit App";
+			productName = "KOMRAD WatchKit App";
+			productReference = 1FDDED241B75186F00A09A19 /* KOMRAD WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FDDECE11B750C1B00A09A19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Sentient Play LLC";
+				TargetAttributes = {
+					1FDDECE81B750C1B00A09A19 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 5N8C6C6J66;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					1FDDED001B750C1B00A09A19 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 1FDDECE81B750C1B00A09A19;
+					};
+					1FDDED141B75186F00A09A19 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 5N8C6C6J66;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					1FDDED231B75186F00A09A19 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 5N8C6C6J66;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 1FDDECE41B750C1B00A09A19 /* Build configuration list for PBXProject "KOMRAD" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FDDECE01B750C1B00A09A19;
+			productRefGroup = 1FDDECEA1B750C1B00A09A19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FDDECE81B750C1B00A09A19 /* KOMRAD */,
+				1FDDED001B750C1B00A09A19 /* KOMRADTests */,
+				1FDDED141B75186F00A09A19 /* KOMRAD WatchKit Extension */,
+				1FDDED231B75186F00A09A19 /* KOMRAD WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FDDECE71B750C1B00A09A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F9781801B7A830900A6D35F /* SimpleMessageCell.xib in Resources */,
+				C23B53D91B7A8EC400AC2466 /* LaunchScreen.xib in Resources */,
+				1F697A591B7D2FA600CA8708 /* PassageCell.xib in Resources */,
+				1FDDECF91B750C1B00A09A19 /* Images.xcassets in Resources */,
+				C23B53DB1B7A8ECA00AC2466 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDDECFF1B750C1B00A09A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDDED131B75186F00A09A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD0C8301B86B2A500EC0776 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDDED221B75186F00A09A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C9A2E531B9883DE00EEA2F0 /* VT220-mod.ttf in Resources */,
+				1FDDED2D1B75186F00A09A19 /* Interface.storyboard in Resources */,
+				1FDDED2F1B75186F00A09A19 /* Images.xcassets in Resources */,
+				1F6EE8CE1B976D3E0006466F /* KomradMessage.png in Resources */,
+				6F0631331BA1FE4C008715FB /* BuggleEfect.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FDDECE51B750C1B00A09A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FE8A04F1BAB416B00BAE852 /* Passage.swift in Sources */,
+				1F9781741B7A379000A6D35F /* Item.swift in Sources */,
+				6F6063EC1BA87A7800D4588D /* Passage_old.swift in Sources */,
+				6FE8A0571BAC403000BAE852 /* PFPassageTag.swift in Sources */,
+				1FBA17841B87BA70000AC624 /* Singleton.swift in Sources */,
+				6FE86E671BB026CC0051706C /* PFStoryVariable.swift in Sources */,
+				1FD0C82D1B8694F000EC0776 /* PassageRowController.swift in Sources */,
+				6FE8A0591BAC427C00BAE852 /* Tag.swift in Sources */,
+				6FE8A0551BAC3FE700BAE852 /* PFTag.swift in Sources */,
+				6FE8A05C1BAC44A600BAE852 /* Constant.swift in Sources */,
+				6FE8A0611BAC6FA600BAE852 /* PFPath.swift in Sources */,
+				1F97817F1B7A830900A6D35F /* SimpleMessageCell.swift in Sources */,
+				6FE8A0531BAB61EA00BAE852 /* Utils.swift in Sources */,
+				6FE8A04C1BAB30FB00BAE852 /* PFLine.swift in Sources */,
+				6FEE69F41BB48F1C00605471 /* ViewController.swift in Sources */,
+				6FEE69F01BB46E7700605471 /* Chapter.swift in Sources */,
+				6F6063E61BA868F700D4588D /* ParseService.swift in Sources */,
+				1FDDECEF1B750C1B00A09A19 /* AppDelegate.swift in Sources */,
+				1F57BE9A1B7C108500ACA589 /* Choice.swift in Sources */,
+				6FE8A0511BAB5EF300BAE852 /* PFChoice.swift in Sources */,
+				1FDDECF21B750C1B00A09A19 /* KOMRAD.xcdatamodeld in Sources */,
+				1F697A581B7D2FA600CA8708 /* PassageCell.swift in Sources */,
+				1F9781831B7A834B00A6D35F /* MessageListAdapter.swift in Sources */,
+				1FFDADA81B83EE6100D0700F /* StringExtension.swift in Sources */,
+				6FEE69EC1BB4682B00605471 /* PFChapter.swift in Sources */,
+				1F5ED23F1B7BB5F6008F3B67 /* ChoiceMessage.swift in Sources */,
+				1F9781761B7A379000A6D35F /* ItemListController.swift in Sources */,
+				6FEE69EE1BB46BD900605471 /* Story.swift in Sources */,
+				6F6063EA1BA86A3200D4588D /* PFPassage.swift in Sources */,
+				1F697A551B7D00BF00CA8708 /* Line.swift in Sources */,
+				6FE8A05F1BAC655600BAE852 /* Path.swift in Sources */,
+				6F6063EF1BA8A7F900D4588D /* PFStory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDDECFD1B750C1B00A09A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FDDED081B750C1B00A09A19 /* KOMRADTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDDED111B75186F00A09A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F9703691BB1C74F00F27994 /* MainInterfaceController.swift in Sources */,
+				6FE86E6C1BB03A3D0051706C /* Path.swift in Sources */,
+				1F5E36251BB5D56E009A5AB1 /* LineChatRowController.swift in Sources */,
+				1FDDAE6B1BB9809B00BE00DC /* ChoiceTerminalRowController.swift in Sources */,
+				1F97036B1BB1C79200F27994 /* ChatRowController2.swift in Sources */,
+				1F5E36291BB5E385009A5AB1 /* LineTerminalRowController.swift in Sources */,
+				6FE86E6B1BB03A3A0051706C /* Tag.swift in Sources */,
+				1FDDED1D1B75186F00A09A19 /* NotificationController.swift in Sources */,
+				1F5E36271BB5D61E009A5AB1 /* ChoiceChatRowController.swift in Sources */,
+				1FDDED1B1B75186F00A09A19 /* InterfaceController.swift in Sources */,
+				6FEE69F21BB489ED00605471 /* Chapter.swift in Sources */,
+				6FE86E691BB03A330051706C /* Choice.swift in Sources */,
+				1F6EE8CB1B9740780006466F /* ChatRowController.swift in Sources */,
+				1FDDED1F1B75186F00A09A19 /* GlanceController.swift in Sources */,
+				1F3153E81BA3399E00BEA3A6 /* SplashInterfaceController.swift in Sources */,
+				1F97036D1BB1E61700F27994 /* TerminalRowController.swift in Sources */,
+				6FE86E681BB039F70051706C /* Passage.swift in Sources */,
+				1FD0C8361B86B4F800EC0776 /* Item.swift in Sources */,
+				1F5E36231BB5B858009A5AB1 /* RowController.swift in Sources */,
+				6FE8A05D1BAC498500BAE852 /* Passage_old.swift in Sources */,
+				6FE86E6A1BB03A360051706C /* Line.swift in Sources */,
+				1FBA17831B87AFD4000AC624 /* Singleton.swift in Sources */,
+				6FE8009A1B976AD300A86115 /* PassageRowController_backup.swift in Sources */,
+				1FD0C8321B86B2F000EC0776 /* PassageRowController.swift in Sources */,
+				1F97036F1BB1EA8200F27994 /* SplashRowController.swift in Sources */,
+				1FEC56191BB43277002083FD /* Manager.swift in Sources */,
+				1F6EE8C91B973F970006466F /* ChatInterfaceController.swift in Sources */,
+				1FD0C83B1B86C41C00EC0776 /* StringExtension.swift in Sources */,
+				6FEE69F11BB489EA00605471 /* Story.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FDDED031B750C1B00A09A19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FDDECE81B750C1B00A09A19 /* KOMRAD */;
+			targetProxy = 1FDDED021B750C1B00A09A19 /* PBXContainerItemProxy */;
+		};
+		4CADB4251B8CA45200F4A268 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FDDED141B75186F00A09A19 /* KOMRAD WatchKit Extension */;
+			targetProxy = 4CADB4241B8CA45200F4A268 /* PBXContainerItemProxy */;
+		};
+		4CADB4281B8CA45300F4A268 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FDDED231B75186F00A09A19 /* KOMRAD WatchKit App */;
+			targetProxy = 4CADB4271B8CA45300F4A268 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1FDDED2B1B75186F00A09A19 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FDDED2C1B75186F00A09A19 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FDDED091B750C1B00A09A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FDDED0A1B750C1B00A09A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FDDED0C1B750C1B00A09A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KOMRAD/KOMRAD.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/KOMRAD",
+				);
+				INFOPLIST_FILE = KOMRAD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SENTIENTPLAY.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KOMRAD/KOMRAD-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		1FDDED0D1B750C1B00A09A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KOMRAD/KOMRAD.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/KOMRAD",
+				);
+				INFOPLIST_FILE = KOMRAD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SENTIENTPLAY.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KOMRAD/KOMRAD-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		1FDDED0F1B750C1B00A09A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KOMRADTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SENTIENTPLAY.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KOMRAD.app/KOMRAD";
+			};
+			name = Debug;
+		};
+		1FDDED101B750C1B00A09A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KOMRADTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SENTIENTPLAY.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KOMRAD.app/KOMRAD";
+			};
+			name = Release;
+		};
+		1FDDED341B75186F00A09A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "KOMRAD WatchKit App/KOMRAD WatchKit App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = KOMRAD_WatchKit_Extension;
+				INFOPLIST_FILE = "KOMRAD WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SENTIENTPLAY.KOMRAD.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		1FDDED351B75186F00A09A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "KOMRAD WatchKit App/KOMRAD WatchKit App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = KOMRAD_WatchKit_Extension;
+				INFOPLIST_FILE = "KOMRAD WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SENTIENTPLAY.KOMRAD.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		1FDDED371B75186F00A09A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "KOMRAD WatchKit Extension/KOMRAD WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KOMRAD WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SENTIENTPLAY.KOMRAD.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		1FDDED381B75186F00A09A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "KOMRAD WatchKit Extension/KOMRAD WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "KOMRAD WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SENTIENTPLAY.KOMRAD.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FDDECE41B750C1B00A09A19 /* Build configuration list for PBXProject "KOMRAD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FDDED091B750C1B00A09A19 /* Debug */,
+				1FDDED0A1B750C1B00A09A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FDDED0B1B750C1B00A09A19 /* Build configuration list for PBXNativeTarget "KOMRAD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FDDED0C1B750C1B00A09A19 /* Debug */,
+				1FDDED0D1B750C1B00A09A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FDDED0E1B750C1B00A09A19 /* Build configuration list for PBXNativeTarget "KOMRADTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FDDED0F1B750C1B00A09A19 /* Debug */,
+				1FDDED101B750C1B00A09A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FDDED331B75186F00A09A19 /* Build configuration list for PBXNativeTarget "KOMRAD WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FDDED341B75186F00A09A19 /* Debug */,
+				1FDDED351B75186F00A09A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FDDED361B75186F00A09A19 /* Build configuration list for PBXNativeTarget "KOMRAD WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FDDED371B75186F00A09A19 /* Debug */,
+				1FDDED381B75186F00A09A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1FDDECF01B750C1B00A09A19 /* KOMRAD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FDDECF11B750C1B00A09A19 /* KOMRAD.xcdatamodel */,
+			);
+			currentVersion = 1FDDECF11B750C1B00A09A19 /* KOMRAD.xcdatamodel */;
+			path = KOMRAD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1FDDECE11B750C1B00A09A19 /* Project object */;
+}

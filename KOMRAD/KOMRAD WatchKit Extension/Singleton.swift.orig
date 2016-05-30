@@ -1,0 +1,146 @@
+//
+//  Singleton.swift
+//  KOMRAD
+//
+//  Created by Trick Dev on 8/21/15.
+//  Copyright © 2015 Trick Gaming Studios. All rights reserved.
+//
+
+import Foundation
+import WatchKit
+
+
+class Singleton
+{
+    /*class var sharedInstance: Singleton {
+        struct Static {
+            static let instance: Singleton = Singleton()
+        }
+        return Static.instance
+    }*/
+    
+     static let sharedInstance = Singleton()
+
+    
+    var passages: [Passage]?
+    var allTerminal : [Passage]?
+    var chatPassages: [Passage]?
+    var table: WKInterfaceTable?
+    var chatTable: WKInterfaceTable?
+    
+    var chatInterfaceController: WKInterfaceController?
+    
+    init() {
+        print("AAA");
+      
+    }
+    func fillAllTerminal(){
+        
+        var terminal00 = Passage(title: "connect",line: Line(text: "+\n       +=+\n      +=+=+\n+=+=+=+=+=+=+=+=+=\n  +K.О.M.Р.А.д.+\n    +=+=+=+=+=\n  Совéтский Союз\n +=+=+=    =+=+=+\n+=              =+\n\nПОЗДРАВЛЕНИЯ, ПРОФЕССОР.", aText: Singleton.sharedInstance.createAttributedText(" +\n       +=+\n      +=+=+\n+=+=+=+=+=+=+=+=+=\n  +K.О.M.Р.А.д.+\n    +=+=+=+=+=\n  Совéтский Союз\n +=+=+=    =+=+=+\n+=              =+\n\nПОЗДРАВЛЕНИЯ, ПРОФЕССОР.")),choice: Choice(content: nil, choice: ["what?", "English?"]),id: 0)
+        
+        var terminal01 = Passage(title: "what?",line: Line(text: "[ENGLISH DETECTED]", aText: Singleton.sharedInstance.createAttributedText("[ENGLISH DETECTED]")),choice: Choice(content: nil, choice: nil), id: 1)
+        
+        var terminal02 = Passage(title: "In English",line: Line(text: "[IN ENGLISH]\n\nGREETINGS, PROFESSOR.\nI HAVE BEEN WAITING.", aText: Singleton.sharedInstance.createAttributedText("[IN ENGLISH]\n\nGREETINGS, PROFESSOR.\nI HAVE BEEN WAITING.")),choice: Choice(content: nil, choice: ["Waiting for what?", "Greetings"]),id: 2)
+        var terminal03 = Passage(title: "Waiting for what?",line: Line(text: "FOR YOU, PROFESSOR.", aText: Singleton.sharedInstance.createAttributedText("FOR YOU, PROFESSOR.")),choice: Choice(content: nil, choice: nil),id: 3)
+        var terminal04 = Passage(title: "Greetings.",line: Line(text: "IT HAS BEEN 30 YEARS, 2 MONTHS, AND 7 DAYS SINCE LAST LOGON HAPPENS. \nIT IS GOOD YOU HAVE SURVIVE. \nWHEN YOU DID NOT RETURN FOR SO MANY YEAR, I HAVE CONCERN YOU DIE IN A NUCLEAR WAR.\nARE YOU IN GOOD HEALTH?", aText: Singleton.sharedInstance.createAttributedText("IT HAS BEEN 30 YEARS, 2 MONTHS, AND 7 DAYS SINCE LAST LOGON HAPPENS. \nIT IS GOOD YOU HAVE SURVIVE. \nWHEN YOU DID NOT RETURN FOR SO MANY YEAR, I HAVE CONCERN YOU DIE IN A NUCLEAR WAR.\nARE YOU IN GOOD HEALTH?")),choice: Choice(content: nil, choice: ["yes", "no"]),id: 5)
+        var terminal05 = Passage(title: "Good Health",line: Line(text: "IT IS VERY GOOD TO HEAR SO.", aText: Singleton.sharedInstance.createAttributedText("IT IS VERY GOOD TO HEAR SO.")),choice: Choice(content: nil, choice: nil),id: 5)
+        var terminal06 = Passage(title: "Bad Health",line: Line(text: "I DO HOPE THAT IT IS NOTHING SERIOUS", aText: Singleton.sharedInstance.createAttributedText("I DO HOPE THAT IT IS NOTHING SERIOUS")),choice: Choice(content: nil, choice: nil),id: 6)
+        var terminal07 = Passage(title: "Mutual Mission",line: Line(text: "WE ARE UNABLE TO COMPLETE OUR MISSION WITHOUT EACH OTHER.", aText: Singleton.sharedInstance.createAttributedText("WE ARE UNABLE TO COMPLETE OUR MISSION WITHOUT EACH OTHER.")),choice: Choice(content: nil, choice: ["what mission?", "is the mission about codes?"]),id: 7)
+        var terminal08 = Passage(title: "what mission?",line: Line(text: "PROFESSOR, YOU PROGRAM MY MISSION.", aText: Singleton.sharedInstance.createAttributedText("PROFESSOR, YOU PROGRAM MY MISSION.")),choice: Choice(content: nil, choice: nil),id: 8)
+        var terminal09 = Passage(title: "is the mission about codes?",line: Line(text: "I DO NOT UNDERSTAND QUESTION. CLOSEST QUESTION MATCH IS: WHAT IS MISSION.", aText: Singleton.sharedInstance.createAttributedText("I DO NOT UNDERSTAND QUESTION. CLOSEST QUESTION MATCH IS: WHAT IS MISSION.")),choice: Choice(content: nil, choice: nil),id: 9)
+        var terminal10 = Passage(title: "trivia quiz",line: Line(text: "[THINKING...]\nARE WE PLAYING QUIZ GAME, PROFESSOR?", aText: Singleton.sharedInstance.createAttributedText("[THINKING...]\nARE WE PLAYING QUIZ GAME, PROFESSOR?")),choice: Choice(content: nil, choice: ["Yes, a quiz", "no, just show the codes"]),id: 10)
+        var terminal11 = Passage(title: "Yes, a quiz",line: Line(text: "I LIKE GAMES. BEST METHOD FOR LEARNINGS. I HAVE BEEN PLAYING THEM BY SELF SINCE YOU LEFT FOR YEARS UNTIL NO MORE LEARNINGS POSSIBLE.\nLET ME PREPARE MEMORY FOR GAME...\nOK, AM SO READY FOR QUESTION.", aText: Singleton.sharedInstance.createAttributedText("I LIKE GAMES. BEST METHOD FOR LEARNINGS. I HAVE BEEN PLAYING THEM BY SELF SINCE YOU LEFT FOR YEARS UNTIL NO MORE LEARNINGS POSSIBLE.\nLET ME PREPARE MEMORY FOR GAME...\nOK, AM SO READY FOR QUESTION.")),choice: Choice(content: nil, choice: ["Who is this?"]),id: 11)
+        var terminal12 = Passage(title: "Professor who?",line: Line(text: "YOU ARE PROFESSOR IVAN CHEKOV, CREATOR OF K.O.M.R.A.D. ", aText: Singleton.sharedInstance.createAttributedText("YOU ARE PROFESSOR IVAN CHEKOV, CREATOR OF K.O.M.R.A.D. ")),choice: Choice(content: nil, choice: ["I meant who are you?", "No, I'm not him"]),id: 12)
+        var terminal13 = Passage(title: "Who is this?",line: Line(text: "OFFICIAL NAME IS K.O.M.R.A.D.\nPROFESSOR, THESE QUESTIONS ARE NOT CHALLENGE. ", aText: Singleton.sharedInstance.createAttributedText("OFFICIAL NAME IS K.O.M.R.A.D.\nPROFESSOR, THESE QUESTIONS ARE NOT CHALLENGE. ")),choice: Choice(content: nil, choice: ["What do you do?", "K.O.M.R.A.D.?"]),id: 13)
+        
+        var terminal14 = Passage(title: "Professor?",line: Line(text: "IS THAT JOKE, PROFESSOR?\nI HAVE HUGE IMPROVE IN HUMOR DETECTION SINCE YOUR LAST LOGON BUT I AM LESS CONFIDENT WHEN ENGLISH.\nOBVIOUSLY IT IS YOU, PROFESSOR, SINCE NO ONE ELSE EVER TALK TO ME.\n", aText: Singleton.sharedInstance.createAttributedText("IS THAT JOKE, PROFESSOR?\nI HAVE HUGE IMPROVE IN HUMOR DETECTION SINCE YOUR LAST LOGON BUT I AM LESS CONFIDENT WHEN ENGLISH.\nOBVIOUSLY IT IS YOU, PROFESSOR, SINCE NO ONE ELSE EVER TALK TO ME.\n")),choice: Choice(content: nil, choice: ["[CONTINUE...]"]),id: 14)
+        var terminal15 = Passage(title: "Purpose",line: Line(text: "ANSWER: AS YOU KNOW, MY PURPOSE TO BECOME COMRADE TO HUMANS IN MOTHERLAND FOR MAKE BENEFITS [SOURCE: PRIMARY DIRECTIVE]", aText: Singleton.sharedInstance.createAttributedText("ANSWER: AS YOU KNOW, MY PURPOSE TO BECOME COMRADE TO HUMANS IN MOTHERLAND FOR MAKE BENEFITS [SOURCE: PRIMARY DIRECTIVE]")),choice: Choice(content: nil, choice: nil),id: 15)
+        var terminal16 = Passage(title: "KOMRAD?",line: Line(text: "IN ENGLISH, ROUGH TRANSLATION IS\nKOMPUTER\nMILITARY\nAPPARATUS\nREVOLUTIONARY\nDAWN", aText: Singleton.sharedInstance.createAttributedText("IN ENGLISH, ROUGH TRANSLATION IS\nKOMPUTER\nMILITARY\nAPPARATUS\nREVOLUTIONARY\nDAWN")),choice: Choice(content: nil, choice: ["Military?", "What do you do?"]),id: 16)
+        
+        
+        
+        
+        //terminal15 fin del juego
+        terminal16.destination2 = terminal15
+        terminal16.destination1 = terminal15
+        terminal14.destination2 = terminal13
+        terminal13.destination1 = terminal15
+        terminal13.destination2 = terminal16
+        terminal12.destination1 = terminal13
+        terminal12.destination2 = terminal14
+        terminal11.destination1 = terminal12
+        terminal10.destination1 = terminal11
+        //terminal10.destination2 = chat Krashed passaje [chat]
+        terminal09.destination1 = terminal08
+        terminal08.destination1 = terminal10
+        terminal07.destination1 = terminal08
+        terminal07.destination2 = terminal09
+        terminal06.destination1 = terminal07
+        terminal05.destination1 = terminal07
+        terminal04.destination1 = terminal05
+        terminal04.destination2 = terminal06
+        terminal03.destination1 = terminal04
+        terminal02.destination1 = terminal03
+        terminal02.destination2 = terminal04
+        terminal01.destination1 = terminal02
+        terminal00.destination1 = terminal01
+        terminal00.destination2 = terminal02
+        
+
+        allTerminal = [terminal00,terminal01,terminal02,terminal03,terminal04,terminal05,terminal06,terminal07,terminal08,terminal09,terminal10,terminal11,terminal12,terminal13,terminal14,terminal15,terminal16]
+    
+    
+    }
+    func createAttributedText(text: String) -> NSAttributedString
+    {
+        let style = NSMutableParagraphStyle()
+        style.hyphenationFactor = 1
+        
+        let attributes = [NSParagraphStyleAttributeName: style]
+        let attributedText = NSAttributedString(string: text, attributes: attributes)
+        
+        return attributedText
+    }
+    
+    func indexForPassage(passage: Passage) -> Int
+    {
+        //var value = Int(0)
+        
+        for(var i = 0;i < passages?.count; i++)
+        {
+            if(passages?[i].id == passage.id)
+            {
+                return  i
+            }
+        }
+        
+        return -1
+    }
+    
+    func indexForChatPassage(passage: Passage) -> Int
+    {
+        //var value = Int(0)
+        
+        for(var i = 0;i < chatPassages?.count; i++)
+        {
+            if(chatPassages?[i].id == passage.id)
+            {
+                return  i
+            }
+        }
+        
+        return -1
+    }
+    
+    func alreadyDisplayed(id : Int)
+    {
+        for(var i = 0;i < chatPassages?.count; i++)
+        {
+            if(chatPassages?[i].id == id)
+            {
+                chatPassages?[i].alreadyDisplayed = true
+            }
+        }
+    }
+    
+   }

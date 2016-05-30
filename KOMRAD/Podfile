@@ -1,0 +1,24 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'KOMRAD' do
+
+#use_frameworks!
+#platform :ios,'8.0'
+#pod 'Parse'
+pod 'FMDB/standalone'
+
+end
+
+target 'KOMRADTests' do
+
+end
+
+target 'KOMRAD WatchKit Extension' do
+
+end
+
+target 'KOMRAD WatchKit App' do
+
+end
+

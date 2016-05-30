@@ -1,0 +1,61 @@
+//
+//  Choice.swift
+//  KOMRAD
+//
+//  Created by Trick Dev on 8/12/15.
+//  Copyright (c) 2015 Trick Gaming Studios. All rights reserved.
+//
+
+import Foundation
+
+class Choice: NSObject, NSCoding
+{
+    var id: Int?
+    var text: String?
+    var passage: Passage?
+    var passagePath: Path?
+<<<<<<< HEAD
+    var wasTaken: Bool?
+   
+    
+    init(id: Int,text: String?,passage: Passage,passagePath: Path?, wasTaken: Bool?)
+=======
+    
+    init(id: Int,text: String?,passage: Passage,passagePath: Path?)
+>>>>>>> develop
+    {
+        self.id = id
+        self.text = text
+        self.passagePath = passagePath
+        self.passage = passage
+<<<<<<< HEAD
+        self.wasTaken = wasTaken
+=======
+>>>>>>> develop
+    }
+    
+    /*NSCoding*/
+    required init(coder decoder: NSCoder) {
+        text = decoder.decodeObjectForKey("text") as! String
+        id = decoder.decodeObjectForKey("id") as! Int
+        passagePath = decoder.decodeObjectForKey("passagePath") as! Path?
+        passage = decoder.decodeObjectForKey("passage") as! Passage?
+<<<<<<< HEAD
+        wasTaken = decoder.decodeObjectForKey("wasTaken") as! Bool
+    }
+=======
+   }
+>>>>>>> develop
+    
+    func encodeWithCoder(coder: NSCoder) {
+        coder.encodeObject(text, forKey: "text")
+        coder.encodeObject(id, forKey: "id")
+        coder.encodeObject(passagePath, forKey: "passagePath")
+        coder.encodeObject(passage, forKey: "passage")
+<<<<<<< HEAD
+        coder.encodeObject(wasTaken, forKey: "wasTaken")       
+=======
+>>>>>>> develop
+    }
+    
+}

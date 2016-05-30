@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CZE-hE-8oT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="VT220-mod.ttf">
+            <string>VT220-mod</string>
+            <string>VT220-mod</string>
+            <string>VT220-mod</string>
+            <string>VT220-mod</string>
+            <string>VT220-mod</string>
+            <string>VT220-mod</string>
+            <string>VT220-mod</string>
+            <string>VT220-mod</string>
+            <string>VT220-mod</string>
+            <string>VT220-mod</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Chat-->
+        <scene sceneID="eBl-Cz-qjz">
+            <objects>
+                <controller identifier="Chat" title="Chat" spacing="0.0" hidesWhenLoading="NO" id="2ym-HJ-5dQ" userLabel="Chat" customClass="ChatInterfaceController" customModule="KOMRAD_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="Mk2-bS-pFJ">
+                            <items>
+                                <tableRow identifier="ChatRow" id="pfv-4x-PFk" customClass="ChatRowController" customModule="KOMRAD_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="0.0" id="bC0-nw-o2V">
+                                        <items>
+                                            <group width="1" height="122" alignment="left" hidden="YES" id="INr-7M-Ja5" userLabel="Message">
+                                                <items>
+                                                    <button alignment="left" backgroundImage="KomradMessage" id="gCA-bz-uoi" userLabel="Message Outlet">
+                                                        <connections>
+                                                            <action selector="ImagePressed" destination="pfv-4x-PFk" id="Xfs-Rf-cHt"/>
+                                                        </connections>
+                                                    </button>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="left" id="s1R-pI-Xqy" userLabel="Choice01">
+                                                <items>
+                                                    <button width="0.90000000000000002" alignment="left" title="Button" id="lvD-Zc-SfF" userLabel="Choice01Button">
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                        <connections>
+                                                            <action selector="button01Pressed" destination="pfv-4x-PFk" id="RDz-LZ-pC0"/>
+                                                        </connections>
+                                                    </button>
+                                                </items>
+                                                <edgeInsets key="margins" left="10" right="0.0" top="6" bottom="0.0"/>
+                                            </group>
+                                            <group width="1" alignment="left" id="3PC-eJ-ERI" userLabel="Choice02">
+                                                <items>
+                                                    <button width="0.90000000000000002" alignment="left" title="Button" id="X0q-FB-2F1" userLabel="Choice02Button">
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                        <connections>
+                                                            <action selector="Button02Pressed" destination="pfv-4x-PFk" id="ZC2-rd-lVb"/>
+                                                        </connections>
+                                                    </button>
+                                                </items>
+                                                <edgeInsets key="margins" left="10" right="0.0" top="6" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="Choice01ButtonGroup" destination="s1R-pI-Xqy" id="ooL-th-oxq"/>
+                                        <outlet property="Choice01ButtonOutlet" destination="lvD-Zc-SfF" id="ww2-Di-axn"/>
+                                        <outlet property="Choice02ButtonGroup" destination="3PC-eJ-ERI" id="k9u-AJ-RVc"/>
+                                        <outlet property="Choice02ButttonOutlet" destination="X0q-FB-2F1" id="s4s-t1-tgf"/>
+                                        <outlet property="MessageGroupOutlet" destination="INr-7M-Ja5" id="HqR-3E-fgt"/>
+                                        <outlet property="MessageOutlet" destination="gCA-bz-uoi" id="tMb-Yb-UJr"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="0.0"/>
+                    <connections>
+                        <outlet property="tableOutlet" destination="Mk2-bS-pFJ" id="GsJ-4w-bm8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="339" y="339"/>
+        </scene>
+        <!--Terminal-->
+        <scene sceneID="c0c-EZ-2jM">
+            <objects>
+                <controller identifier="Terminal" title="Terminal" hidesWhenLoading="NO" id="0WW-vk-t3X" customClass="InterfaceController" customModule="KOMRAD_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="3rH-gE-sad">
+                            <items>
+                                <tableRow identifier="PassageRow" id="3su-sL-mh0" customClass="PassageRowController" customModule="KOMRAD_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="bW1-iI-fEy">
+                                        <items>
+                                            <timer alignment="center" hidden="YES" enabled="YES" id="2Ln-hZ-yRr" userLabel="Countdown">
+                                                <color key="textColor" red="1" green="0.0" blue="0.10015009929157515" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" name="VT220-mod" family="VT220-mod" pointSize="24"/>
+                                            </timer>
+                                            <label width="1" alignment="left" text="LINE" numberOfLines="30" id="4Qd-Ts-WSe" userLabel="Line">
+                                                <color key="textColor" red="0.15434621374518151" green="0.95494002524141419" blue="0.00079390898460742854" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" name="VT220-mod" family="VT220-mod" pointSize="14"/>
+                                            </label>
+                                            <group width="1" alignment="left" hidden="YES" id="A7F-6H-3ho">
+                                                <items>
+                                                    <label alignment="left" text="&gt;" numberOfLines="30" id="t4c-kv-hOC" userLabel="Prompt">
+                                                        <color key="textColor" red="0.15434621370000001" green="0.95494002519999999" blue="0.00079390898460000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="font" name="VT220-mod" family="VT220-mod" pointSize="14"/>
+                                                    </label>
+                                                    <label alignment="left" hidden="YES" text="_" numberOfLines="30" id="NQe-gj-EBH" userLabel="Cursor">
+                                                        <color key="textColor" red="0.15434621370000001" green="0.95494002519999999" blue="0.00079390898460000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="font" name="VT220-mod" family="VT220-mod" pointSize="14"/>
+                                                    </label>
+                                                    <imageView alignment="left" verticalAlignment="bottom" alpha="0.65000000000000002" image="cursor" contentMode="bottomLeft" animationDuration="0.59999999999999998" id="YQz-o9-I1U"/>
+                                                </items>
+                                            </group>
+                                            <button width="1" alignment="left" title="Choice01" id="GZ8-mh-rjU" userLabel="Choice-01">
+                                                <color key="titleColor" red="0.0" green="1" blue="0.036595565580000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" name="VT220-mod" family="VT220-mod" pointSize="14"/>
+                                                <connections>
+                                                    <action selector="button01Pressed" destination="3su-sL-mh0" id="LcJ-y5-wve"/>
+                                                </connections>
+                                            </button>
+                                            <button width="1" alignment="left" title="Choice02" id="1Qh-DP-C6b" userLabel="Choice-02">
+                                                <color key="titleColor" red="0.0" green="1" blue="0.036595565580000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" name="VT220-mod" family="VT220-mod" pointSize="14"/>
+                                                <connections>
+                                                    <action selector="button02Pressed" destination="3su-sL-mh0" id="br5-he-vNn"/>
+                                                </connections>
+                                            </button>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="choice01Button" destination="GZ8-mh-rjU" id="OKS-Pa-QGr"/>
+                                        <outlet property="choice02Button" destination="1Qh-DP-C6b" id="7dH-R7-QzD"/>
+                                        <outlet property="cursorOutlet" destination="NQe-gj-EBH" id="G7t-XA-nv9"/>
+                                        <outlet property="lineLabel" destination="4Qd-Ts-WSe" id="wHo-H9-XzK"/>
+                                        <outlet property="promptGroup" destination="A7F-6H-3ho" id="0Jo-OP-kmL"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </table>
+                    </items>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="tableOutlet" destination="3rH-gE-sad" id="ECz-nq-ILe"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="498" y="339"/>
+        </scene>
+        <!--Splash-->
+        <scene sceneID="bi6-K9-9lw">
+            <objects>
+                <controller identifier="Splash" hidesWhenLoading="NO" id="BOx-zu-3ov" userLabel="Splash" customClass="SplashInterfaceController" customModule="KOMRAD_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="center" backgroundImage="KomradMessage" id="vQC-4l-mXr">
+                            <connections>
+                                <action selector="ImagePressed" destination="BOx-zu-3ov" id="krD-PJ-KoZ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="ImageButtonOutlet" destination="vQC-4l-mXr" id="UwY-02-aCV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="181" y="339"/>
+        </scene>
+        <!--Main Interface Controller-->
+        <scene sceneID="IKE-pp-Nmf">
+            <objects>
+                <controller hidesWhenLoading="NO" id="CZE-hE-8oT" customClass="MainInterfaceController" customModule="KOMRAD_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="38r-ye-kAa">
+                            <items>
+                                <tableRow identifier="LineChat" id="r1h-vv-lnl" userLabel="LineChatRow" customClass="LineChatRowController" customModule="KOMRAD_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="0.0" id="lIB-P9-0Ld">
+                                        <items>
+                                            <group alignment="right" layout="vertical" radius="6" spacing="0.0" id="eqt-CT-FPU" userLabel="Line">
+                                                <items>
+                                                    <group alignment="left" radius="8" id="Bhz-1T-fbV" userLabel="Bubble">
+                                                        <items>
+                                                            <label alignment="right" textAlignment="right" numberOfLines="0" id="59u-W0-IU3">
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                                            </label>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.039215686270000001" green="0.37254901959999998" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <edgeInsets key="margins" left="10" right="10" top="5" bottom="8"/>
+                                                    </group>
+                                                    <group width="20" height="10" alignment="right" hidden="YES" id="mHC-33-2Zq" userLabel="BubbleEffectGroup">
+                                                        <items>
+                                                            <imageView width="1" alignment="left" image="BuggleEfect.png" contentMode="redraw" id="NXZ-ex-kO8" userLabel="BubbleEfect.png"/>
+                                                        </items>
+                                                        <edgeInsets key="margins" left="0.0" right="7" top="0.0" bottom="0.0"/>
+                                                    </group>
+                                                </items>
+                                                <color key="backgroundColor" red="0.21535773029999999" green="0.30784847859999998" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="8" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="BubbleEffect" destination="mHC-33-2Zq" id="w2x-WI-R7S"/>
+                                        <outlet property="LabelOutlet" destination="59u-W0-IU3" id="XNW-lv-n63"/>
+                                        <outlet property="LineGroupOutlet" destination="eqt-CT-FPU" id="zA6-p3-Ukt"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="ChoiceChat" id="drk-LG-Tjt" userLabel="ChoiceChatRow" customClass="ChoiceChatRowController" customModule="KOMRAD_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="0.0" id="Awt-lD-zbO" userLabel="Choice">
+                                        <items>
+                                            <button width="0.90000000000000002" alignment="center" hidden="YES" title="Button" id="7tb-F1-37J" userLabel="Choice01Button">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                <connections>
+                                                    <action selector="ChoicePressed" destination="drk-LG-Tjt" id="JcB-Cm-hhK"/>
+                                                </connections>
+                                            </button>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <edgeInsets key="margins" left="10" right="0.0" top="6" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="ChoiceButtonGroup" destination="Awt-lD-zbO" id="amz-Sc-0rd"/>
+                                        <outlet property="ChoiceButtonOutlet" destination="7tb-F1-37J" id="7y6-zR-fSV"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="Splash" id="sd0-5I-t0k" userLabel="NewMessage" customClass="SplashRowController" customModule="KOMRAD_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="130.5" alignment="left" id="83g-cf-v9l">
+                                        <items>
+                                            <button width="1" alignment="left" backgroundImage="KomradMessage" id="Zon-6C-ohl">
+                                                <connections>
+                                                    <action selector="ButtonPressed" destination="sd0-5I-t0k" id="fpI-aw-4kI"/>
+                                                </connections>
+                                            </button>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="MessageButtonOutlet" destination="Zon-6C-ohl" id="76n-2l-woh"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="LineTerminal" id="19b-c2-jhU" userLabel="LineTerminalRow" customClass="LineTerminalRowController" customModule="KOMRAD_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="ivp-lT-SU9">
+                                        <items>
+                                            <label width="1" alignment="left" numberOfLines="30" id="gQL-Iy-w6E" userLabel="Line">
+                                                <color key="textColor" red="0.15434621370000001" green="0.95494002519999999" blue="0.00079390898460000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" name="VT220-mod" family="VT220-mod" pointSize="14"/>
+                                            </label>
+                                            <group width="1" alignment="left" hidden="YES" id="A8M-4c-Nqc">
+                                                <items>
+                                                    <label alignment="left" text="&gt;" numberOfLines="30" id="roX-fR-OHD" userLabel="Prompt">
+                                                        <color key="textColor" red="0.15434621370000001" green="0.95494002519999999" blue="0.00079390898460000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="font" name="VT220-mod" family="VT220-mod" pointSize="14"/>
+                                                    </label>
+                                                    <label alignment="left" hidden="YES" text="_" numberOfLines="30" id="wR0-Mw-sEK" userLabel="Cursor">
+                                                        <color key="textColor" red="0.15434621370000001" green="0.95494002519999999" blue="0.00079390898460000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="font" name="VT220-mod" family="VT220-mod" pointSize="14"/>
+                                                    </label>
+                                                    <imageView alignment="left" verticalAlignment="bottom" alpha="0.65000000000000002" image="cursor" contentMode="bottomLeft" animationDuration="0.59999999999999998" id="91R-OQ-tpt"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="cursorOutlet" destination="wR0-Mw-sEK" id="Wg4-Ej-icc"/>
+                                        <outlet property="lineLabel" destination="gQL-Iy-w6E" id="IVq-BH-blo"/>
+                                        <outlet property="promptGroup" destination="A8M-4c-Nqc" id="eJ9-tf-tZW"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="ChoiceTerminal" id="flY-rZ-fvW" userLabel="ChoiceTerminalRow" customClass="ChoiceTerminalRowController" customModule="KOMRAD_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="uW6-2U-spM">
+                                        <items>
+                                            <button width="1" alignment="left" title="Choice01" id="LrV-Vv-KjY" userLabel="Choice">
+                                                <color key="titleColor" red="0.0" green="1" blue="0.036595565580000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" name="VT220-mod" family="VT220-mod" pointSize="14"/>
+                                                <connections>
+                                                    <action selector="choicePressed" destination="flY-rZ-fvW" id="Dhb-L1-I5I"/>
+                                                </connections>
+                                            </button>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="choiceButtonOutlet" destination="LrV-Vv-KjY" id="atD-15-vr7"/>
+                                        <outlet property="choiceGroupOutlet" destination="uW6-2U-spM" id="85I-kB-VQu"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label width="1" height="25" alignment="center" verticalAlignment="center" id="eOY-lC-VoU"/>
+                    </items>
+                    <menu key="menu" id="fA3-UX-7kH">
+                        <items>
+                            <menuItem title="Restart" icon="repeat" id="5mA-vI-Q2v"/>
+                            <menuItem title="Fast Mode" icon="resume" id="xUg-Df-8VC"/>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="SpaceLabel" destination="eOY-lC-VoU" id="nuM-by-lBQ"/>
+                        <outlet property="table" destination="38r-ye-kAa" id="0L8-Po-Tjv"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="174" y="643"/>
+        </scene>
+    </scenes>
+</document>
