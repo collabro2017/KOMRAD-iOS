@@ -63,6 +63,26 @@ class ParseService
             
         return resultArray;
     }
+    
+    static func checkVersion(fromLocal fromLocal: Bool, onSuccess:(data: [PFStory])->Void, onFailure: (error: NSError)->Void)
+    {
+        let query = PFStory.query()!
+        query.limit = 1
+        
+        if (fromLocal) {
+            query.fromLocalDatastore()
+        }
+        
+        query.findObjectsInBackgroundWithBlock { (data: [PFObject]?, error: NSError?) in
+            if error == nil {
+                onSuccess(data: data as! [PFStory])
+            }
+            else {
+                onFailure(error: error!)
+            }
+        }
+    }
+    
     static func RetrieveAll<T : PFObject>(fromLocal : Bool = false,orderByKeys: [String] = [], ascOrder: Bool = true, includeKeys : [String] = [], limit : Int = 1000, pinAll : Bool = true) -> [T]
     {
         var resultArray : [T] = []

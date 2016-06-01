@@ -61,18 +61,21 @@ extension WatchSessionManager {
     
     func sendMessageData(data: NSData,
         replyHandler: ((NSData) -> Void)? = nil,
-        errorHandler: ((NSError) -> Void)? = nil)
+        errorHandler: ((NSError) -> Void)? = nil, onFailure: ()->Void)
     {
-        validReachableSession?.sendMessageData(data, replyHandler: replyHandler, errorHandler: errorHandler)
+        if validReachableSession != nil {
+            validReachableSession!.sendMessageData(data, replyHandler: replyHandler, errorHandler: errorHandler)
+        }
+        else {
+            onFailure()
+        }
     }
+    
     func session(session: WCSession, didReceiveMessageData messageData: NSData, replyHandler: (NSData) -> Void) {
         
         deserializeNSData(messageData, replyHandler: replyHandler)
         
     }
-    
-    
-    
     
     func deserializeNSData(messageData : NSData , replyHandler: (NSData) -> Void)
     {
@@ -83,7 +86,7 @@ extension WatchSessionManager {
         
         if (id > 20000)
         {
-            var result = NSString(data: messageData, encoding:NSUTF8StringEncoding) as String?
+            let result = NSString(data: messageData, encoding:NSUTF8StringEncoding) as String?
             if (result != nil)
             {
                 nextPassage = ParseUtils.getPassageByName(result!)
@@ -119,10 +122,6 @@ extension WatchSessionManager {
                 let data : NSData = NSKeyedArchiver.archivedDataWithRootObject(nextPassage!)
                 
                 replyHandler(data)
-                
-            
-        
-        
     }
     
 }

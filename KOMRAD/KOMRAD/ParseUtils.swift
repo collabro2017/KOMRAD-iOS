@@ -25,8 +25,7 @@ class ParseUtils
     static var pTags = [PFTag]();
     //A test To Improve performance
     
-    static func getAll(){
-        
+    static func getAll() {        
         let fromLocal: Bool = false
         PFChapter.unpinAllObjectsInBackground()
         // var includeKeys = ["story"]
@@ -60,7 +59,345 @@ class ParseUtils
         
         pTags = ParseService.RetrieveAll(fromLocal,orderByKeys: ["tagId"],ascOrder: true)
         PFTag.pinAllInBackground(pTags)
-        
+    }
+    
+    static func removeAllObjectsFromLocalDatabase(onSuccess: (status: Bool) -> Void) {
+        PFStory.unpinAllObjectsInBackgroundWithBlock({ (status: Bool, error: NSError?) in
+            if error == nil {
+                PFChapter.unpinAllObjectsInBackgroundWithBlock({ (status: Bool, error: NSError?) in
+                    if error == nil {
+                        PFChoice.unpinAllObjectsInBackgroundWithBlock({ (status: Bool, error: NSError?) in
+                            if error == nil {
+                                PFPassage.unpinAllObjectsInBackgroundWithBlock({ (status: Bool, error: NSError?) in
+                                    if error == nil {
+                                        PFLine.unpinAllObjectsInBackgroundWithBlock({ (status: Bool, error: NSError?) in
+                                            if error == nil {
+                                                PFPath.unpinAllObjectsInBackgroundWithBlock({ (status: Bool, error: NSError?) in
+                                                    if error == nil {
+                                                        PFPassageTag.unpinAllObjectsInBackgroundWithBlock({ (status: Bool, error: NSError?) in
+                                                            if error == nil {
+                                                                PFStoryVariable.unpinAllObjectsInBackgroundWithBlock({ (status: Bool, error: NSError?) in
+                                                                    if error == nil {
+                                                                        PFTag.unpinAllObjectsInBackgroundWithBlock({ (status: Bool, error: NSError?) in
+                                                                            if error == nil {
+                                                                                onSuccess(status: true)
+                                                                            }
+                                                                            else {
+                                                                                onSuccess(status: false)
+                                                                            }
+                                                                        })
+                                                                    }
+                                                                    else {
+                                                                        onSuccess(status: false)
+                                                                    }
+                                                                })
+                                                            }
+                                                            else {
+                                                                onSuccess(status: false)
+                                                            }
+                                                        })
+                                                    }
+                                                    else {
+                                                        onSuccess(status: false)
+                                                    }
+                                                })
+                                            }
+                                            else {
+                                                onSuccess(status: false)
+                                            }
+                                        })
+                                    }
+                                    else {
+                                        onSuccess(status: false)
+                                    }
+                                })
+                            }
+                            else {
+                                onSuccess(status: false)
+                            }
+                        })
+                    }
+                    else {
+                        onSuccess(status: false)
+                    }
+                })
+            }
+            else {
+                onSuccess(status: false)
+            }
+        })
+    }
+    
+    static func getStoryAndPin(onSuccess: (success: Bool)->Void) {
+        let storyQuery = PFStory.query()!
+        storyQuery.limit = 1000
+        storyQuery.orderByAscending("storyId")
+        storyQuery.findObjectsInBackgroundWithBlock { (data: [PFObject]?, error: NSError?) in
+            if error == nil {
+                PFStory.pinAllInBackground(data, block: { (status: Bool, error: NSError?) in
+                    if error == nil {
+                        onSuccess(success: true)
+                    }
+                    else {
+                        onSuccess(success: false)
+                    }
+                })
+            }
+            else {
+                onSuccess(success: false)
+            }
+        }
+    }
+    
+    static func getChaptersAndPin(onSuccess: (success: Bool)->Void) {
+        let chapterQuery = PFChapter.query()!
+        chapterQuery.limit = 1000
+        chapterQuery.orderByAscending("chapterId")
+        chapterQuery.findObjectsInBackgroundWithBlock { (data: [PFObject]?, error: NSError?) in
+            if error == nil {
+                PFChapter.pinAllInBackground(data, block: { (status: Bool, error: NSError?) in
+                    if error == nil {
+                        onSuccess(success: true)
+                    }
+                    else {
+                        onSuccess(success: false)
+                    }
+                })
+            }
+            else {
+                onSuccess(success: false)
+            }
+        }
+    }
+    
+    static func getChoicesAndPin(onSuccess: (success: Bool)->Void) {
+        let choiceQuery = PFChoice.query()!
+        choiceQuery.limit = 1000
+        choiceQuery.orderByAscending("choiceId")
+        choiceQuery.findObjectsInBackgroundWithBlock { (data: [PFObject]?, error: NSError?) in
+            if error == nil {
+                PFChoice.pinAllInBackground(data, block: { (status: Bool, error: NSError?) in
+                    if error == nil {
+                        onSuccess(success: true)
+                    }
+                    else {
+                        onSuccess(success: false)
+                    }
+                })
+            }
+            else {
+                onSuccess(success: false)
+            }
+        }
+    }
+    
+    static func getPassageAndPin(onSuccess: (success: Bool)->Void) {
+        let passageQuery = PFPassage.query()!
+        passageQuery.limit = 1000
+        passageQuery.orderByAscending("passageId")
+        passageQuery.findObjectsInBackgroundWithBlock { (data: [PFObject]?, error: NSError?) in
+            if error == nil {
+                PFPassage.pinAllInBackground(data, block: { (status: Bool, error: NSError?) in
+                    if error == nil {
+                        onSuccess(success: true)
+                    }
+                    else {
+                        onSuccess(success: false)
+                    }
+                })
+            }
+            else {
+                onSuccess(success: false)
+            }
+        }
+    }
+    
+    static func getLinesAndPin(onSuccess: (success: Bool)->Void) {
+        let lineQuery = PFLine.query()!
+        lineQuery.limit = 1000
+        lineQuery.orderByAscending("passageLineId")
+        lineQuery.findObjectsInBackgroundWithBlock { (data: [PFObject]?, error: NSError?) in
+            if error == nil {
+                PFLine.pinAllInBackground(data, block: { (status: Bool, error: NSError?) in
+                    if error == nil {
+                        onSuccess(success: true)
+                    }
+                    else {
+                        onSuccess(success: false)
+                    }
+                })
+            }
+            else {
+                onSuccess(success: false)
+            }
+        }
+    }
+    
+    static func getPathsAndPin(onSuccess: (success: Bool)->Void) {
+        let pathQuery = PFPath.query()!
+        pathQuery.limit = 1000
+        pathQuery.orderByAscending("passagePathId")
+        pathQuery.findObjectsInBackgroundWithBlock { (data: [PFObject]?, error: NSError?) in
+            if error == nil {
+                PFPath.pinAllInBackground(data, block: { (status: Bool, error: NSError?) in
+                    if error == nil {
+                        onSuccess(success: true)
+                    }
+                    else {
+                        onSuccess(success: false)
+                    }
+                })
+            }
+            else {
+                onSuccess(success: false)
+            }
+        }
+    }
+    
+    static func getPassageTagsAndPin(onSuccess: (success: Bool)->Void) {
+        let passageTagQuery = PFPassageTag.query()!
+        passageTagQuery.limit = 1000
+        passageTagQuery.orderByAscending("passageTagId")
+        passageTagQuery.findObjectsInBackgroundWithBlock { (data: [PFObject]?, error: NSError?) in
+            if error == nil {
+                PFPassageTag.pinAllInBackground(data, block: { (status: Bool, error: NSError?) in
+                    if error == nil {
+                        onSuccess(success: true)
+                    }
+                    else {
+                        onSuccess(success: false)
+                    }
+                })
+            }
+            else {
+                onSuccess(success: false)
+            }
+        }
+    }
+    
+    static func getStoryVariablesAndPin(onSuccess: (success: Bool)->Void) {
+        let passageTagQuery = PFStoryVariable.query()!
+        passageTagQuery.limit = 1000
+        passageTagQuery.orderByAscending("storyVariableId")
+        passageTagQuery.findObjectsInBackgroundWithBlock { (data: [PFObject]?, error: NSError?) in
+            if error == nil {
+                PFStoryVariable.pinAllInBackground(data, block: { (status: Bool, error: NSError?) in
+                    if error == nil {
+                        onSuccess(success: true)
+                    }
+                    else {
+                        onSuccess(success: false)
+                    }
+                })
+            }
+            else {
+                onSuccess(success: false)
+            }
+        }
+    }
+    
+    static func getTagsAndPin(onSuccess: (success: Bool)->Void) {
+        let tagQuery = PFTag.query()!
+        tagQuery.limit = 1000
+        tagQuery.orderByAscending("tagId")
+        tagQuery.findObjectsInBackgroundWithBlock { (data: [PFObject]?, error: NSError?) in
+            if error == nil {
+                PFTag.pinAllInBackground(data, block: { (status: Bool, error: NSError?) in
+                    if error == nil {
+                        onSuccess(success: true)
+                    }
+                    else {
+                        onSuccess(success: false)
+                    }
+                })
+            }
+            else {
+                onSuccess(success: false)
+            }
+        }
+    }
+    
+    static func getAllAndSaveInDatabase(onSuccess: (success: Bool)->Void) {
+        self.getStoryAndPin({ (success) in
+            if success {
+                self.getChaptersAndPin({ (success) in
+                    if success {
+                        self.getChoicesAndPin({ (success) in
+                            if success {
+                                self.getPassageAndPin({ (success) in
+                                    if success {
+                                        self.getLinesAndPin({ (success) in
+                                            if success {
+                                                self.getPathsAndPin({ (success) in
+                                                    if success {
+                                                        self.getPassageTagsAndPin({ (success) in
+                                                            if success {
+                                                                self.getStoryVariablesAndPin({ (success) in
+                                                                    if success {
+                                                                        self.getTagsAndPin({ (success) in
+                                                                            onSuccess(success: success)
+                                                                        })
+                                                                    }
+                                                                    else {
+                                                                        onSuccess(success: false)
+                                                                    }
+                                                                })
+                                                            }
+                                                            else {
+                                                                onSuccess(success: false)
+                                                            }
+                                                        })
+                                                    }
+                                                    else {
+                                                        onSuccess(success: false)
+                                                    }
+                                                })
+                                            }
+                                            else {
+                                                onSuccess(success: false)
+                                            }
+                                        })
+                                    }
+                                    else {
+                                        onSuccess(success: false)
+                                    }
+                                })
+                            }
+                            else {
+                                onSuccess(success: false)
+                            }
+                        })
+                    }
+                    else {
+                        onSuccess(success: false)
+                    }
+                })
+            }
+            else {
+                onSuccess(success: false)
+            }
+        })
+    }
+    
+    static func getStoryFromLocalDB(onSuccess: (data: Story?)->Void, onFailure: (error: NSError)->Void) {
+        let query = PFStory.query()!
+        query.limit = 1000
+        query.fromLocalDatastore()
+        query.findObjectsInBackgroundWithBlock { (data: [PFObject]?, error: NSError?) in
+            if error == nil {
+                if data != nil {
+                    let storyObj = (data as! [PFStory]).first!
+                    let story = Story(id: storyObj.storyId, author: storyObj.author, title: storyObj.title,
+                                                    subtitle: storyObj.subtitle, version: storyObj.version)
+                    story.storyVariables = getStoryVariables(storyObj, fromLocal: true)
+                    story.chapters = getChapters(storyObj, fromLocal: true)
+                    onSuccess(data: story)
+                }
+            }
+            else {
+                onFailure(error: error!)
+            }
+        }
     }
     
     static func getStory(fromLocal: Bool = false) -> Story
@@ -87,10 +424,10 @@ class ParseUtils
     static func getStoryVariables(pFStory: PFStory, fromLocal: Bool = false) -> [StoryVariable]?
     {
         var storyVariables = Array<StoryVariable>()
-        var pFStoryVariables : [PFStoryVariable] = ParseService.RetrieveByFieldname("story", value: pFStory ,fromLocal: true,orderByKeys: ["storyVariableId"],ascOrder: true)
+        let pFStoryVariables : [PFStoryVariable] = ParseService.RetrieveByFieldname("story", value: pFStory ,fromLocal: true,orderByKeys: ["storyVariableId"],ascOrder: true)
         for pFStoryVariable in pFStoryVariables
         {
-            var storyVariable = StoryVariable(id: pFStoryVariable.storyVariableId, name: pFStoryVariable.name, initialValue: pFStoryVariable.initialValue, detail: pFStoryVariable.description)
+            let storyVariable = StoryVariable(id: pFStoryVariable.storyVariableId, name: pFStoryVariable.name, initialValue: pFStoryVariable.initialValue, detail: pFStoryVariable.description)
             storyVariables.append(storyVariable)
         }
         return storyVariables
@@ -182,6 +519,7 @@ class ParseUtils
             
             let defaults = NSUserDefaults.standardUserDefaults()
             defaults.setInteger(pFPassage.passageId, forKey: "lastPassageRead")
+            defaults.synchronize()
             
             /*var pFChapters : [PFChapter] = ParseService.RetrieveByFieldname("objectId", value: pFPassage.chapter.objectId!,fromLocal: true,orderByKeys: ["chapterId"],ascOrder: true)
             

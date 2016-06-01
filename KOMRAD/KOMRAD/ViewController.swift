@@ -34,6 +34,7 @@ class ViewController: UIViewController, WCSessionDelegate, AVAudioPlayerDelegate
     @IBOutlet weak var imgKOMRADsingle: UIImageView!
     @IBOutlet weak var imgDarkness: UIView!
     @IBOutlet weak var imgKOMRAD: UIImageView!
+    @IBOutlet var loadingView: UIView!
     
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
@@ -124,79 +125,95 @@ class ViewController: UIViewController, WCSessionDelegate, AVAudioPlayerDelegate
     
     func contentLoaded(done : Bool)
     {
-        if(done)
-        {
-            lblLoadingContent.text = "Complete"
-        }
-        else
-        {
-            lblLoadingContent.text = "Kinda failed"
+        dispatch_async(dispatch_get_main_queue()) {
+            if(done) {
+                self.lblLoadingContent.text = "Complete"
+            }
+            else {
+                self.lblLoadingContent.text = "Kinda failed"
+            }
         }
     }
     
-    func loadContent() -> [Story]
+    func loadContent(onSucess onSucess: (data: [Story]) -> Void, onFailure: (error: String) -> Void)
     {
+        loadVersion()
         var stories = [Story]()
-        var pFStories : [PFStory]?
-        let version = loadVersion()
-        //  var includeKeys = ["passage","passagePath","passagePath.lastPassage","passagePath.passage","passagePath.nextPassage","storyVariable", "choice"]
-        var fromLocal = true
         
-        //Only works on device.
+        //Check for internet connection
         if(Reachability.isConnectedToNetwork() == true)
         {
-            var DBStories : [PFStory] = ParseService.CheckVersion(false)
-            var DBVersion = DBStories[0].version
-            //var LocalStories : [PFStory] = ParseService.CheckVersion(true)
-            
-           // if(LocalStories.count > 0)
-           // {
-                //var LocalVersion = LocalStories[0].version
+            ParseService.checkVersion(fromLocal: false, onSuccess: { (data) in
+                let DBStories = data
+                let DBVersion = DBStories[0].version
                 
-                if(DBVersion > storyVersion)
-                {
-                    //pFStories = DBStories
-                    fromLocal = false
-                    storyVersion = DBVersion
-                    storeVersion()
-                    ParseUtils.getAll()
+                if DBVersion > self.storyVersion { //Parse has updated data.
+                    
+                    //Remove the older data from Local Database
+                    ParseUtils.removeAllObjectsFromLocalDatabase({ (status) in
+                        if status {
+                            //fetch updated data from Parse and saved it in local DB
+                            ParseUtils.getAllAndSaveInDatabase({ (success) in
+                                if success {
+                                    self.storyVersion = DBVersion
+                                    self.storeVersion()
+                                    
+                                    //Fetch Story from local Datastore
+                                    ParseUtils.getStoryFromLocalDB({ (data) in
+                                        //Run the success block
+                                        stories.append(data!)
+                                        onSucess(data: stories)
+                                        
+                                    }, onFailure: { (error) in
+                                        onFailure(error: error.localizedDescription)
+                                    })
+                                }
+                                else {
+                                    onFailure(error: "Unable to fetch data.")
+                                }
+                            })
+                        }
+                        else {
+                            onFailure(error: "Unable to delete data.")
+                        }
+                    })
                 }
-                else
-                {
-                    //pFStories = LocalStories
-                    fromLocal = true
+                else { //Fetch the data from local Database.                    
+                    ParseUtils.getStoryFromLocalDB({ (data) in
+                        //Run the success block
+                        stories.append(data!)
+                        onSucess(data: stories)
+                        
+                        }, onFailure: { (error) in
+                            onFailure(error: error.localizedDescription)
+                    })
                 }
-         /*   }
-            else
-            {
-                pFStories = LocalStories
-                fromLocal = true
-            }*/
-            
-            
+            },
+            onFailure: { (error) in
+                print(error.localizedDescription)
+            })
         }
-        
-        //TODO: CHange with fromLocal and delete getall below
-        
-        //ParseUtils.getAll()
-        var story = ParseUtils.getStory(fromLocal)
-        
-        stories.append(story)
-        return stories
+        else {
+            onFailure(error: "No internet connection.")
+        }
     }
-    
-    
-    
     
     func sendMessage(callback: (done : Bool)-> Void)
     {
         
-        
-        /* LOAD PARSE CONTENT AND CONVERT TO PASSAGE DOMAIN */
-        stories = loadContent();
-        
-        
-        lblLoadingContent.text = "Preparing to Send Data to WatchKit"
+        self.loadContent(onSucess: { (data) in
+            self.loadingView.removeFromSuperview()
+            
+            self.stories = data
+            self.lblLoadingContent.text = "Preparing to Send Data to WatchKit"
+            self.sendStoryToWatchApp()
+            
+        }, onFailure: { (error) in
+            self.showAlertViewWithRetryButton(error)
+        })
+    }
+    
+    func sendStoryToWatchApp() {
         /* Serialize the Passage array into NSDATA */
         NSKeyedArchiver.setClassName("Passage", forClass: Passage.self)
         NSKeyedArchiver.setClassName("Choice", forClass: Choice.self)
@@ -207,24 +224,35 @@ class ViewController: UIViewController, WCSessionDelegate, AVAudioPlayerDelegate
         NSKeyedArchiver.setClassName("Chapter", forClass: Chapter.self)
         NSKeyedArchiver.setClassName("StoryVariable", forClass: StoryVariable.self)
         
-        
+        //Get the story
         let auxStory = Story(id: self.stories[0].id, author: self.stories[0].author, title: self.stories[0].title , subtitle: self.stories[0].subtitle, version: self.stories[0].version)
         
-        
         let applicationData: NSData  = NSKeyedArchiver.archivedDataWithRootObject(auxStory)
-        lblLoadingContent.text = "Sending Story to watch"
-        // Send message with NSDATA to Watchkit extension
-        WatchSessionManager.sharedManager.sendMessageData(applicationData, replyHandler: { (replyHandler: NSData) -> Void in
-            self.lblLoadingContent.text = "Sending chapters"
-            print("sending chapters")
-            self.SendChapters(self.stories[0].chapters![0])
-            }, errorHandler: { (errorHandler: NSError) -> Void in
-                var errmsg = "Error: " + String(errorHandler)
-                print(errmsg)
-                self.lblLoadingContent.text = errmsg
-                self.contentLoaded(true)
+        dispatch_async(dispatch_get_main_queue(), {
+            self.lblLoadingContent.text = "Sending Story to watch"
         })
         
+        // Send message with NSDATA to Watchkit extension
+        WatchSessionManager.sharedManager.sendMessageData(applicationData, replyHandler: { (replyHandler: NSData) -> Void in
+            
+            print("sending chapters")
+            dispatch_async(dispatch_get_main_queue(), {
+                self.lblLoadingContent.text = "Sending chapters"
+            })
+            self.SendChapters(self.stories[0].chapters![0])
+            
+            }, errorHandler: { (errorHandler: NSError) -> Void in
+                
+                let errmsg = "Error: " + String(errorHandler)
+                print(errmsg)
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.lblLoadingContent.text = errmsg
+                })
+                self.contentLoaded(false)
+                
+            }, onFailure: {
+                self.showAlertViewForWatchWithRetryButton("This game is designed for Apple Watch app. Please open the Watch app to play this game.")
+        })
     }
     
     func SendChapters(chapter: Chapter)
@@ -234,7 +262,11 @@ class ViewController: UIViewController, WCSessionDelegate, AVAudioPlayerDelegate
         {
             //If all chapters are sent, send the variables
             let applicationData: NSData  = NSKeyedArchiver.archivedDataWithRootObject(self.stories[0].storyVariables!)
-            self.lblLoadingContent.text = "Sending variables"
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                self.lblLoadingContent.text = "Sending variables"
+            })
+            
             // Send message with NSDATA to Watchkit extension
             WatchSessionManager.sharedManager.sendMessageData(applicationData, replyHandler: { (replyHandler: NSData) -> Void in
                 print("Llegaron las  variables : ")
@@ -245,6 +277,8 @@ class ViewController: UIViewController, WCSessionDelegate, AVAudioPlayerDelegate
                 }, errorHandler: { (errorHandler: NSError) -> Void in
                     print("Error:  ", errorHandler)
                     self.contentLoaded(true)
+                }, onFailure: {
+                    self.showAlertViewForWatchWithRetryButton("This game is designed for Apple Watch app. Please open the Watch app to play this game.")
             })
             
         }
@@ -261,6 +295,8 @@ class ViewController: UIViewController, WCSessionDelegate, AVAudioPlayerDelegate
                 }, errorHandler: { (errorHandler: NSError) -> Void in
                     print("Error:  ", errorHandler)
                     self.contentLoaded(true)
+                }, onFailure: {
+                    self.showAlertViewForWatchWithRetryButton("This game is designed for Apple Watch app. Please open the Watch app to play this game.")
             })
         }
         
@@ -309,7 +345,7 @@ class ViewController: UIViewController, WCSessionDelegate, AVAudioPlayerDelegate
     {
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        var auxVersion = defaults.integerForKey("storyVersion2")
+        var auxVersion = defaults.integerForKey("storyVersion")
         
         storyVersion = auxVersion
         
@@ -333,6 +369,28 @@ class ViewController: UIViewController, WCSessionDelegate, AVAudioPlayerDelegate
         var data : NSData = dictionary["replyHandler"]!
         deserializeNSData(messageData: dictionary["messageData"]!, replyHandler: (data) -> Void)
     
-    }*/    
+    }*/
     
+    func showAlertViewWithRetryButton(message: String) {
+        let alertView = UIAlertController(title: "KOMRAD", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertView.addAction(UIAlertAction(title: "Re-try", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+            self.sendMessage(self.contentLoaded)
+        }))
+        alertView.addAction(UIAlertAction(title: "Quit", style: UIAlertActionStyle.Destructive, handler: { (action: UIAlertAction) in
+            exit(0)
+        }))
+        self.showViewController(alertView, sender: nil)
     }
+    
+    func showAlertViewForWatchWithRetryButton(message: String) {
+        let alertView = UIAlertController(title: "KOMRAD", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertView.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+            self.sendStoryToWatchApp()
+        }))
+        alertView.addAction(UIAlertAction(title: "Quit", style: UIAlertActionStyle.Destructive, handler: { (action: UIAlertAction) in
+            exit(0)
+        }))
+        self.showViewController(alertView, sender: nil)
+    }
+    
+}
